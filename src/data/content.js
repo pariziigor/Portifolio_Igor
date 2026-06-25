@@ -81,6 +81,43 @@ export const dictionary = {
     },
     projects: [
       {
+  title: "Sistema de Orçamento Estimativo Automatizado",
+  description:
+    "Plataforma full-stack responsiva projetada para eliminar o tempo gasto na criação de orçamentos manuais. Através da inserção de parâmetros específicos, o sistema gera estimativas de custo automaticamente em poucos minutos. Criado inicialmente para uso em totens de autoatendimento, o sistema é acessível via web a partir de qualquer dispositivo com internet.",
+  tags: ["React", "FastAPI", "Kiosk", "Automação", "Full-Stack"],
+  problem:
+    "O maior gargalo da operação era o tempo elevado gasto para elaborar orçamentos de estimativa manualmente. O processo era lento, exigia cálculos complexos e gerava longas esperas para o cliente, o que inviabilizava um atendimento rápido e escalável, especialmente durante eventos e feiras.",
+  solution:
+    "Desenvolvimento de um sistema unificado que centraliza e automatiza a precificação. O usuário (ou o próprio cliente no autoatendimento) insere os parâmetros do projeto, e a aplicação processa as regras de negócio instantaneamente. O que antes levava horas, agora entrega um orçamento estimativo completo em minutos, seja no totem ou no navegador do celular.",
+  technologies: [
+    "React", 
+    "TypeScript", 
+    "FastAPI", 
+    "SQLite", 
+    "SQLAlchemy", 
+    "Alembic", 
+    "Responsive Design"
+  ],
+  highlights: [
+    "Cálculo automatizado de orçamentos com base em parâmetros",
+    "Redução do tempo de resposta (estimativas prontas em minutos)",
+    "Acesso universal via web em qualquer dispositivo (mobile, desktop ou totem)",
+    "Interface de alta usabilidade com fluxo guiado passo a passo",
+    "Captação de leads integrada diretamente à geração da proposta",
+    "Motor de cálculo centralizado no backend para garantir consistência"
+  ],
+  gallery: [
+    { 
+      title: "Inserção de Parâmetros", 
+      caption: "Interface guiada e escalável onde as variáveis do projeto são inseridas rapidamente, sem complicação." 
+    },
+    { 
+      title: "Estimativa em Minutos", 
+      caption: "Cálculo processado automaticamente pelo sistema, entregando o orçamento completo e pronto para o cliente em tempo real." 
+    }
+  ]
+},
+      {
         title: "Automação de Relatórios e Documentos",
         description:
           "Ferramentas em Python para ler relatórios, organizar dados operacionais e gerar documentos automaticamente. O foco é cortar tarefas repetitivas, padronizar saídas e reduzir erros em processos administrativos.",
@@ -97,22 +134,6 @@ export const dictionary = {
         ],
       },
       {
-        title: "Sistema de Orçamentos e Catálogo",
-        description:
-          "Aplicação full-stack para clientes, produtos e cotações, com APIs em FastAPI e uma experiência em React voltada para montar orçamentos com fluxo limpo, rápido e fácil de manter.",
-        tags: ["React", "FastAPI", "Quotes"],
-        problem:
-          "O processo de orçamento dependia de dados espalhados, cadastro manual de clientes/produtos e pouca rastreabilidade entre solicitação, item e proposta.",
-        solution:
-          "Sistema com cadastro de clientes, produtos, autenticação, montagem de cotações e endpoints organizados para manter o fluxo de orçamento centralizado.",
-        technologies: ["React", "TypeScript", "FastAPI", "SQLAlchemy", "SQLite", "Alembic"],
-        highlights: ["Fluxo de cotação centralizado", "Cadastro de clientes e produtos", "Backend com rotas protegidas", "Base preparada para evoluir"],
-        gallery: [
-          { title: "Catálogo e produtos", caption: "Tela para consultar itens e montar propostas com mais velocidade." },
-          { title: "Fluxo de orçamento", caption: "Interface para reunir cliente, produtos e condições em uma cotação." },
-        ],
-      },
-      {
         title: "PriceTable Pro",
         description:
           "Plataforma para criação e gestão de tabelas de preços, com configuração visual dos dados e exportação de layouts em PDF de alta qualidade para uso comercial e operacional.",
@@ -126,38 +147,6 @@ export const dictionary = {
         gallery: [
           { title: "Editor visual", caption: "Área para ajustar dados, colunas e aparência da tabela." },
           { title: "Preview PDF", caption: "Prévia do layout final antes da exportação." },
-        ],
-      },
-      {
-        title: "Dashboard de Suprimentos",
-        description:
-          "Sistema para apoiar decisões de compras cruzando estoque, demandas de obra e necessidades por projeto. A proposta é entregar uma visão objetiva do que precisa ser comprado, priorizado ou revisado.",
-        tags: ["React", "FastAPI", "SQLite"],
-        problem:
-          "A decisão de compra ficava menos precisa quando estoque, demanda de obras e prioridades de projeto eram analisados separadamente.",
-        solution:
-          "Dashboard com backend para cruzar demandas e estoque, expondo indicadores simples para apoiar compra, prioridade e revisão.",
-        technologies: ["React", "FastAPI", "SQLite", "Python", "Data Analysis"],
-        highlights: ["Cálculo de necessidade de material", "Visão por projeto", "Consulta de estoque", "Apoio à priorização de compras"],
-        gallery: [
-          { title: "Resumo de suprimentos", caption: "Indicadores de necessidade, estoque e criticidade." },
-          { title: "Lista de materiais", caption: "Tabela operacional para comparar demanda e disponibilidade." },
-        ],
-      },
-      {
-        title: "Interface Touch para Totens",
-        description:
-          "Experiência pensada para uso em eventos e pontos de atendimento, com navegação simples, botões grandes, coleta de leads e geração de orçamento em tempo real.",
-        tags: ["React", "Kiosk", "UI/UX"],
-        problem:
-          "Em eventos, o atendimento precisa ser rápido e claro, sem depender de navegação complexa ou formulários pequenos em telas touch.",
-        solution:
-          "Interface em etapas, com componentes grandes, fluxo guiado, coleta de dados e foco em operação sem teclado e mouse.",
-        technologies: ["React", "Windows Kiosk", "Touch UI", "Local Storage", "UI/UX"],
-        highlights: ["Layout para toque", "Fluxo guiado", "Captação de leads", "Uso em tela cheia"],
-        gallery: [
-          { title: "Tela inicial touch", caption: "Entrada simples com ações grandes e leitura imediata." },
-          { title: "Captação e orçamento", caption: "Etapas para registrar contato e gerar proposta rapidamente." },
         ],
       },
       {
