@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=Space+Grotesk:wght@500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    max-width: 100%;
+    background: #f4f1ea;
+    overflow-x: hidden;
+  }
+
+  #root {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  section,
+  header,
+  main,
+  footer {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  ::selection {
+    background: #d7ff3f;
+    color: #111111;
+  }
+}
+
+@layer components {
+  .icon-button {
+    @apply inline-flex h-10 min-w-10 shrink-0 items-center justify-center gap-1 border-2 border-current bg-paper px-2 text-ink transition duration-200 hover:-translate-y-0.5 hover:bg-acid dark:bg-ink dark:text-paper dark:hover:bg-acid dark:hover:text-ink;
+  }
+
+  .button-primary {
+    @apply inline-flex w-full max-w-full items-center justify-center gap-2 border-2 border-current bg-ink px-5 py-3 text-center font-display text-sm font-black uppercase text-paper shadow-brutalSm transition duration-200 hover:-translate-y-0.5 hover:shadow-none dark:bg-paper dark:text-ink sm:w-auto;
+  }
+
+  .button-secondary {
+    @apply inline-flex w-full max-w-full items-center justify-center gap-2 border-2 border-current px-5 py-3 text-center font-display text-sm font-black uppercase transition duration-200 hover:-translate-y-0.5 hover:bg-acid hover:text-ink sm:w-auto;
+  }
+
+  .field-label {
+    @apply block font-display text-xs font-black uppercase;
+  }
+
+  .field-input {
+    @apply mt-2 w-full border-2 border-current bg-transparent px-4 py-3 font-sans text-base font-medium outline-none transition focus:bg-acid focus:text-ink;
+  }
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+.shadow-brutal,
+.shadow-brutalSm {
+  max-width: calc(100% - 4px);
+}
+
+@media (max-width: 640px) {
+  .shadow-brutal,
+  .shadow-brutalSm {
+    box-shadow: none !important;
+    max-width: 100%;
+  }
+}
+
+@supports not (overflow: clip) {
+  section,
+  header,
+  main,
+  footer {
+    overflow-x: hidden;
+  }
+}
+
+.reveal {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 600ms ease,
+    transform 600ms ease;
+}
+
+html.reveal-ready .reveal:not(.is-visible) {
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
