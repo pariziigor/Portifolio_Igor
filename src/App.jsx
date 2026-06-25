@@ -5,6 +5,7 @@ import { Hero } from "./components/Hero.jsx";
 import { ProjectCard } from "./components/ProjectCard.jsx";
 import { ProjectModal } from "./components/ProjectModal.jsx";
 import { Section } from "./components/Section.jsx";
+import { SkillIcon } from "./components/SkillIcon.jsx";
 import { useI18n } from "./context/I18nContext.jsx";
 
 function App() {
@@ -132,11 +133,16 @@ function App() {
                 className="reveal min-w-0 border-2 border-current bg-paper p-5 shadow-brutalSm dark:bg-ink sm:p-6"
               >
                 <h3 className="break-words font-display text-xl font-black sm:text-2xl">{group.title}</h3>
-                <ul className="mt-6 space-y-3">
+                <ul className="mt-6 grid gap-3">
                   {group.items.map((item) => (
-                    <li key={item} className="flex items-center gap-3 font-bold">
-                      <span className="h-3 w-3 shrink-0 border-2 border-current bg-acid" />
-                      {item}
+                    <li
+                      key={item}
+                      className="flex min-w-0 items-center gap-3 border-2 border-current bg-paper px-3 py-3 font-bold transition hover:bg-acid hover:text-ink dark:bg-ink dark:hover:bg-acid dark:hover:text-ink"
+                    >
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center border-2 border-current bg-acid text-ink">
+                        <SkillIcon name={item} />
+                      </span>
+                      <span className="min-w-0 break-words">{item}</span>
                     </li>
                   ))}
                 </ul>

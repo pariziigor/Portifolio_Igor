@@ -17,8 +17,8 @@ export const dictionary = {
     about: {
       title: "Sobre Mim",
       body:
-        "Sou estudante de Análise e Desenvolvimento de Sistemas (ADS) e atuo com dados aplicados a compras e suprimentos. Minha vivência no setor de construção civil me ajuda a enxergar gargalos reais: planilhas que se repetem, relatórios difíceis de consolidar, fluxos de orçamento manuais e informações espalhadas entre estoque, projetos e fornecedores. Meu trabalho é transformar esse cenário em ferramentas simples de usar, combinando Python, React, FastAPI, SQLite e geração automatizada de documentos para criar processos mais rápidos, rastreáveis e confiáveis.",
-      pillars: ["Construção Civil", "Automação de processos", "Interfaces diretas"],
+        "Sou estudante de Análise e Desenvolvimento de Sistemas (ADS) com foco no desenvolvimento de automações e aplicações desktop. Atualmente, trabalho com dados aplicados a compras e suprimentos na Aulevi, onde utilizo minha bagagem no setor de construção civil para mapear e resolver ineficiências operacionais. Atuo desde a automação de processos manuais até a criação de sistemas interativos complexos, utilizando Python, React, FastAPI e SQLite. Meu diferencial é aliar uma arquitetura robusta a um design de interface minimalista e moderno, garantindo que fluxos de trabalho antes fragmentados se tornem sistemas unificados, rápidos e fáceis de usar.",
+      pillars: ["Construção Civil", "Automação de processos", "Desenvolvimento de sistemas"],
     },
     experienceTitle: "Experiência",
     experiences: [
@@ -28,8 +28,8 @@ export const dictionary = {
         place: "Aulevi - São Carlos, SP",
         period: "Jan/2026 - Atual",
         description:
-          "Desenvolvimento de ferramentas em Python para automatizar propostas comerciais e orçamentos, eliminando processos manuais de extração de dados e gerando saídas visuais padronizadas. Atuação com SQL, Python, Power BI e Excel para suporte estratégico à área de compras.",
-        highlights: ["Automação em Python", "SQL e tratamento de dados", "Power BI e Excel", "Análise de custos e fornecedores"],
+          "Apoio estratégico à área de compras e suprimentos unindo inteligência de dados e desenvolvimento de software. Atuo desde a análise de dados com SQL, Power BI e Excel até a concepção de sistemas completos e ferramentas em Python. Meu foco é a automação de processos manuais de ponta a ponta, substituindo rotinas lentas de extração de dados por sistemas unificados que entregam informações rápidas e saídas visuais padronizadas.",
+        highlights: ["Desenvolvimento de Sistemas", "SQL e tratamento de dados", "Power BI e Excel", "Análise de custos e fornecedores"],
       },
       {
         type: "Profissional",
@@ -37,7 +37,7 @@ export const dictionary = {
         place: "Simple Wall / Smart Pods - São Carlos, SP",
         period: "Jul/2024 - Dez/2025",
         description:
-          "Extração, tratamento, limpeza e padronização de dados com SQL, Excel e Python. Consolidação de bases para compras, produção e suprimentos, criação de dashboards e KPIs no Power BI, apoio em cotações, ordens de compra, pré-notas e Master Data.",
+          "Combino a análise técnica de dados com a execução operacional no setor de suprimentos. Utilizo SQL, Python e Excel para extrair e higienizar bases, consolidando informações críticas que são visualizadas através de dashboards e KPIs no Power BI. Toda essa estrutura tecnológica que desenvolvo serve de alicerce para dar agilidade e segurança às atividades diárias de compras, apoiando ativamente em cotações, ordens de compra, processos de pré-notas e gestão de Master Data.",
         highlights: ["Dashboards e KPIs", "Compras e suprimentos", "Master Data", "Relatórios automatizados"],
       },
       {
@@ -46,7 +46,7 @@ export const dictionary = {
         place: "Compass UOL - Remoto",
         period: "Jun/2023 - Out/2023",
         description:
-          "Desenvolvimento de aplicações com React Native e TypeScript, aplicação de boas práticas de segurança, versionamento com Git e atuação em ambiente ágil com Scrum. Exploração de serviços AWS com foco no Well-Architected Framework.",
+          "Foco na construção de aplicações seguras, estáveis e bem estruturadas. Desenvolvo ecossistemas utilizando React Native e TypeScript para garantir um código limpo e livre de ambiguidades estruturais. Trabalho de forma integrada a ambientes ágeis (Scrum), gerenciando entregas com Git e aplicando rigorosos padrões de segurança de ponta a ponta. No aspecto de infraestrutura, apoio-me no AWS Well-Architected Framework para explorar serviços em nuvem e projetar soluções preparadas para escalar de forma eficiente.",
         highlights: ["React Native", "TypeScript", "Git e Scrum", "AWS Well-Architected"],
       },
       {
@@ -181,15 +181,15 @@ export const dictionary = {
     skills: [
       {
         title: "Front-end & UI",
-        items: ["React", "Vite", "Tailwind CSS", "Context API", "Design minimalista/brutalista"],
+        items: ["React", "Vite", "Tailwind CSS", "TypeScript", "Context API", "Design minimalista/brutalista"],
       },
       {
         title: "Back-end & Dados",
-        items: ["Python", "FastAPI", "SQLite", "Análise de dados", "Modelagem de APIs"],
+        items: ["Python", "FastAPI", "SQLite", "SQL", "Power BI", "Excel"],
       },
       {
         title: "Automação & Operação",
-        items: ["Puppeteer", "Geração de PDF", "Aplicações para totem", "Processos de compras"],
+        items: ["Puppeteer", "Git", "AWS", "Geração de PDF", "Aplicações para totem", "Processos de compras"],
       },
     ],
     contact: {
@@ -385,15 +385,15 @@ export const dictionary = {
     skills: [
       {
         title: "Front-end & UI",
-        items: ["React", "Vite", "Tailwind CSS", "Context API", "Minimalist/brutalist design"],
+        items: ["React", "Vite", "Tailwind CSS", "TypeScript", "Context API", "Minimalist/brutalist design"],
       },
       {
         title: "Back-end & Data",
-        items: ["Python", "FastAPI", "SQLite", "Data analysis", "API modeling"],
+        items: ["Python", "FastAPI", "SQLite", "SQL", "Power BI", "Excel"],
       },
       {
         title: "Automation & Operations",
-        items: ["Puppeteer", "PDF generation", "Kiosk applications", "Purchasing processes"],
+        items: ["Puppeteer", "Git", "AWS", "PDF generation", "Kiosk applications", "Purchasing processes"],
       },
     ],
     contact: {
