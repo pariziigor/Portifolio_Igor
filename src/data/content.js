@@ -1,6 +1,13 @@
 export const dictionary = {
   pt: {
-    nav: ["Início", "Sobre", "Experiência", "Projetos", "Habilidades", "Contato"],
+    nav: [
+      "Início",
+      "Sobre",
+      "Experiência",
+      "Projetos",
+      "Habilidades",
+      "Contato",
+    ],
     hero: {
       eyebrow: "Dados / Automação / Sistemas web",
       title: "Transformo rotinas operacionais em sistemas claros.",
@@ -16,9 +23,12 @@ export const dictionary = {
     },
     about: {
       title: "Sobre Mim",
-      body:
-        "Sou estudante de Análise e Desenvolvimento de Sistemas (ADS) com foco no desenvolvimento de automações e aplicações desktop. Atualmente, trabalho com dados aplicados a compras e suprimentos na Aulevi, onde utilizo minha bagagem no setor de construção civil para mapear e resolver ineficiências operacionais. Atuo desde a automação de processos manuais até a criação de sistemas interativos complexos, utilizando Python, React, FastAPI e SQLite. Meu diferencial é aliar uma arquitetura robusta a um design de interface minimalista e moderno, garantindo que fluxos de trabalho antes fragmentados se tornem sistemas unificados, rápidos e fáceis de usar.",
-      pillars: ["Construção Civil", "Automação de processos", "Desenvolvimento de sistemas"],
+      body: "Sou estudante de Análise e Desenvolvimento de Sistemas (ADS) com foco no desenvolvimento de automações e aplicações desktop. Atualmente, trabalho com dados aplicados a compras e suprimentos na Aulevi, onde utilizo minha bagagem no setor de construção civil para mapear e resolver ineficiências operacionais. Atuo desde a automação de processos manuais até a criação de sistemas interativos complexos, utilizando Python, React, FastAPI e SQLite. Meu diferencial é aliar uma arquitetura robusta a um design de interface minimalista e moderno, garantindo que fluxos de trabalho antes fragmentados se tornem sistemas unificados, rápidos e fáceis de usar.",
+      pillars: [
+        "Construção Civil",
+        "Automação de processos",
+        "Desenvolvimento de sistemas",
+      ],
     },
     experienceTitle: "Experiência",
     experiences: [
@@ -29,7 +39,12 @@ export const dictionary = {
         period: "Jan/2026 - Atual",
         description:
           "Apoio estratégico à área de compras e suprimentos unindo inteligência de dados e desenvolvimento de software. Atuo desde a análise de dados com SQL, Power BI e Excel até a concepção de sistemas completos e ferramentas em Python. Meu foco é a automação de processos manuais de ponta a ponta, substituindo rotinas lentas de extração de dados por sistemas unificados que entregam informações rápidas e saídas visuais padronizadas.",
-        highlights: ["Desenvolvimento de Sistemas", "SQL e tratamento de dados", "Power BI e Excel", "Análise de custos e fornecedores"],
+        highlights: [
+          "Desenvolvimento de Sistemas",
+          "SQL e tratamento de dados",
+          "Power BI e Excel",
+          "Análise de custos e fornecedores",
+        ],
       },
       {
         type: "Profissional",
@@ -38,7 +53,12 @@ export const dictionary = {
         period: "Jul/2024 - Dez/2025",
         description:
           "Combino a análise técnica de dados com a execução operacional no setor de suprimentos. Utilizo SQL, Python e Excel para extrair e higienizar bases, consolidando informações críticas que são visualizadas através de dashboards e KPIs no Power BI. Toda essa estrutura tecnológica que desenvolvo serve de alicerce para dar agilidade e segurança às atividades diárias de compras, apoiando ativamente em cotações, ordens de compra, processos de pré-notas e gestão de Master Data.",
-        highlights: ["Dashboards e KPIs", "Compras e suprimentos", "Master Data", "Relatórios automatizados"],
+        highlights: [
+          "Dashboards e KPIs",
+          "Compras e suprimentos",
+          "Master Data",
+          "Relatórios automatizados",
+        ],
       },
       {
         type: "Profissional",
@@ -47,7 +67,12 @@ export const dictionary = {
         period: "Jun/2023 - Out/2023",
         description:
           "Foco na construção de aplicações seguras, estáveis e bem estruturadas. Desenvolvo ecossistemas utilizando React Native e TypeScript para garantir um código limpo e livre de ambiguidades estruturais. Trabalho de forma integrada a ambientes ágeis (Scrum), gerenciando entregas com Git e aplicando rigorosos padrões de segurança de ponta a ponta. No aspecto de infraestrutura, apoio-me no AWS Well-Architected Framework para explorar serviços em nuvem e projetar soluções preparadas para escalar de forma eficiente.",
-        highlights: ["React Native", "TypeScript", "Git e Scrum", "AWS Well-Architected"],
+        highlights: [
+          "React Native",
+          "TypeScript",
+          "Git e Scrum",
+          "AWS Well-Architected",
+        ],
       },
       {
         type: "Acadêmica",
@@ -56,7 +81,12 @@ export const dictionary = {
         period: "2022 - Atual",
         description:
           "Formação superior voltada a programação, banco de dados, desenvolvimento web, engenharia de software e construção de sistemas, conectando fundamentos técnicos com projetos práticos de automação, dados e interfaces.",
-        highlights: ["Programação", "Banco de dados", "Desenvolvimento web", "Engenharia de software"],
+        highlights: [
+          "Programação",
+          "Banco de dados",
+          "Desenvolvimento web",
+          "Engenharia de software",
+        ],
       },
       {
         type: "Acadêmica",
@@ -65,7 +95,12 @@ export const dictionary = {
         period: "2018 - 2021",
         description:
           "Formação técnica com base em sistemas aviônicos, manutenção, lógica de diagnóstico e atenção a processos críticos, contribuindo para uma visão disciplinada de operação, precisão e confiabilidade.",
-        highlights: ["Aviônicos", "Manutenção técnica", "Diagnóstico", "Processos críticos"],
+        highlights: [
+          "Aviônicos",
+          "Manutenção técnica",
+          "Diagnóstico",
+          "Processos críticos",
+        ],
       },
     ],
     projectsTitle: "Projetos",
@@ -81,42 +116,44 @@ export const dictionary = {
     },
     projects: [
       {
-  title: "Sistema de Orçamento Estimativo Automatizado",
-  description:
-    "Plataforma full-stack responsiva projetada para eliminar o tempo gasto na criação de orçamentos manuais. Através da inserção de parâmetros específicos, o sistema gera estimativas de custo automaticamente em poucos minutos. Criado inicialmente para uso em totens de autoatendimento, o sistema é acessível via web a partir de qualquer dispositivo com internet.",
-  tags: ["React", "FastAPI", "Kiosk", "Automação", "Full-Stack"],
-  problem:
-    "O maior gargalo da operação era o tempo elevado gasto para elaborar orçamentos de estimativa manualmente. O processo era lento, exigia cálculos complexos e gerava longas esperas para o cliente, o que inviabilizava um atendimento rápido e escalável, especialmente durante eventos e feiras.",
-  solution:
-    "Desenvolvimento de um sistema unificado que centraliza e automatiza a precificação. O usuário (ou o próprio cliente no autoatendimento) insere os parâmetros do projeto, e a aplicação processa as regras de negócio instantaneamente. O que antes levava horas, agora entrega um orçamento estimativo completo em minutos, seja no totem ou no navegador do celular.",
-  technologies: [
-    "React", 
-    "TypeScript", 
-    "FastAPI", 
-    "SQLite", 
-    "SQLAlchemy", 
-    "Alembic", 
-    "Responsive Design"
-  ],
-  highlights: [
-    "Cálculo automatizado de orçamentos com base em parâmetros",
-    "Redução do tempo de resposta (estimativas prontas em minutos)",
-    "Acesso universal via web em qualquer dispositivo (mobile, desktop ou totem)",
-    "Interface de alta usabilidade com fluxo guiado passo a passo",
-    "Captação de leads integrada diretamente à geração da proposta",
-    "Motor de cálculo centralizado no backend para garantir consistência"
-  ],
-  gallery: [
-    { 
-      title: "Inserção de Parâmetros", 
-      caption: "Interface guiada e escalável onde as variáveis do projeto são inseridas rapidamente, sem complicação." 
-    },
-    { 
-      title: "Estimativa em Minutos", 
-      caption: "Cálculo processado automaticamente pelo sistema, entregando o orçamento completo e pronto para o cliente em tempo real." 
-    }
-  ]
-},
+        title: "Sistema de Orçamento Estimativo Automatizado",
+        description:
+          "Plataforma full-stack responsiva projetada para eliminar o tempo gasto na criação de orçamentos manuais. Através da inserção de parâmetros específicos, o sistema gera estimativas de custo automaticamente em poucos minutos. Criado inicialmente para uso em totens de autoatendimento, o sistema é acessível via web a partir de qualquer dispositivo com internet.",
+        tags: ["React", "FastAPI", "Kiosk", "Automação", "Full-Stack"],
+        problem:
+          "O maior gargalo da operação era o tempo elevado gasto para elaborar orçamentos de estimativa manualmente. O processo era lento, exigia cálculos complexos e gerava longas esperas para o cliente, o que inviabilizava um atendimento rápido e escalável, especialmente durante eventos e feiras.",
+        solution:
+          "Desenvolvimento de um sistema unificado que centraliza e automatiza a precificação. O usuário (ou o próprio cliente no autoatendimento) insere os parâmetros do projeto, e a aplicação processa as regras de negócio instantaneamente. O que antes levava horas, agora entrega um orçamento estimativo completo em minutos, seja no totem ou no navegador do celular.",
+        technologies: [
+          "React",
+          "TypeScript",
+          "FastAPI",
+          "SQLite",
+          "SQLAlchemy",
+          "Alembic",
+          "Responsive Design",
+        ],
+        highlights: [
+          "Cálculo automatizado de orçamentos com base em parâmetros",
+          "Redução do tempo de resposta (estimativas prontas em minutos)",
+          "Acesso universal via web em qualquer dispositivo (mobile, desktop ou totem)",
+          "Interface de alta usabilidade com fluxo guiado passo a passo",
+          "Captação de leads integrada diretamente à geração da proposta",
+          "Motor de cálculo centralizado no backend para garantir consistência",
+        ],
+        gallery: [
+          {
+            title: "Inserção de Parâmetros",
+            caption:
+              "Interface guiada e escalável onde as variáveis do projeto são inseridas rapidamente, sem complicação.",
+          },
+          {
+            title: "Estimativa em Minutos",
+            caption:
+              "Cálculo processado automaticamente pelo sistema, entregando o orçamento completo e pronto para o cliente em tempo real.",
+          },
+        ],
+      },
       {
         title: "Automação de Relatórios e Documentos",
         description:
@@ -126,11 +163,29 @@ export const dictionary = {
           "Relatórios e documentos administrativos exigiam conferência manual, cópia de dados entre arquivos e repetição de etapas sujeitas a erro.",
         solution:
           "Criação de scripts para ler arquivos, consolidar informações, aplicar regras de validação e gerar documentos padronizados de forma automática.",
-        technologies: ["Python", "Pandas", "OpenPyXL", "PDF/Docs", "Automação local"],
-        highlights: ["Leitura e limpeza de dados", "Geração padronizada de documentos", "Redução de retrabalho", "Fluxo simples para uso administrativo"],
+        technologies: [
+          "Python",
+          "Pandas",
+          "OpenPyXL",
+          "PDF/Docs",
+          "Automação local",
+        ],
+        highlights: [
+          "Leitura e limpeza de dados",
+          "Geração padronizada de documentos",
+          "Redução de retrabalho",
+          "Fluxo simples para uso administrativo",
+        ],
         gallery: [
-          { title: "Painel de execução", caption: "Resumo das rotinas processadas e status de validação." },
-          { title: "Saída documental", caption: "Documento final gerado com dados tratados e layout padronizado." },
+          {
+            title: "Painel de execução",
+            caption: "Resumo das rotinas processadas e status de validação.",
+          },
+          {
+            title: "Saída documental",
+            caption:
+              "Documento final gerado com dados tratados e layout padronizado.",
+          },
         ],
       },
       {
@@ -143,10 +198,21 @@ export const dictionary = {
         solution:
           "Interface para configurar dados e layouts, com renderização controlada e exportação em PDF usando automação de navegador.",
         technologies: ["React", "Tailwind CSS", "Puppeteer", "Node.js", "PDF"],
-        highlights: ["Configuração visual", "Exportação em PDF", "Layout comercial mais consistente", "Fluxo pensado para edição rápida"],
+        highlights: [
+          "Configuração visual",
+          "Exportação em PDF",
+          "Layout comercial mais consistente",
+          "Fluxo pensado para edição rápida",
+        ],
         gallery: [
-          { title: "Editor visual", caption: "Área para ajustar dados, colunas e aparência da tabela." },
-          { title: "Preview PDF", caption: "Prévia do layout final antes da exportação." },
+          {
+            title: "Editor visual",
+            caption: "Área para ajustar dados, colunas e aparência da tabela.",
+          },
+          {
+            title: "Preview PDF",
+            caption: "Prévia do layout final antes da exportação.",
+          },
         ],
       },
       {
@@ -158,11 +224,29 @@ export const dictionary = {
           "Um portfólio genérico não mostrava bem a combinação entre desenvolvimento web, automação e experiência real com processos operacionais.",
         solution:
           "Construção de uma página responsiva com conteúdo bilíngue, tema claro/escuro, visual minimalista/brutalista e estrutura pronta para detalhar cada projeto.",
-        technologies: ["React", "Vite", "Tailwind CSS", "Context API", "Lucide Icons"],
-        highlights: ["Tema claro/escuro", "PT-BR e EN", "Componentes reutilizáveis", "Modal detalhado por projeto"],
+        technologies: [
+          "React",
+          "Vite",
+          "Tailwind CSS",
+          "Context API",
+          "Lucide Icons",
+        ],
+        highlights: [
+          "Tema claro/escuro",
+          "PT-BR e EN",
+          "Componentes reutilizáveis",
+          "Modal detalhado por projeto",
+        ],
         gallery: [
-          { title: "Hero responsivo", caption: "Primeiro bloco com mensagem direta, imagem e estatísticas técnicas." },
-          { title: "Cards interativos", caption: "Grade de projetos com detalhes expandidos em modal." },
+          {
+            title: "Hero responsivo",
+            caption:
+              "Primeiro bloco com mensagem direta, imagem e estatísticas técnicas.",
+          },
+          {
+            title: "Cards interativos",
+            caption: "Grade de projetos com detalhes expandidos em modal.",
+          },
         ],
       },
     ],
@@ -170,7 +254,14 @@ export const dictionary = {
     skills: [
       {
         title: "Front-end & UI",
-        items: ["React", "Vite", "Tailwind CSS", "TypeScript", "Context API", "Design minimalista/brutalista"],
+        items: [
+          "React",
+          "Vite",
+          "Tailwind CSS",
+          "TypeScript",
+          "Context API",
+          "Design minimalista/brutalista",
+        ],
       },
       {
         title: "Back-end & Dados",
@@ -178,12 +269,20 @@ export const dictionary = {
       },
       {
         title: "Automação & Operação",
-        items: ["Puppeteer", "Git", "AWS", "Geração de PDF", "Aplicações para totem", "Processos de compras"],
+        items: [
+          "Puppeteer",
+          "Git",
+          "AWS",
+          "Geração de PDF",
+          "Aplicações para totem",
+          "Processos de compras",
+        ],
       },
     ],
     contact: {
       title: "Contato",
-      subtitle: "Tem um processo manual, uma planilha crítica ou uma rotina que consome tempo demais?",
+      subtitle:
+        "Tem um processo manual, uma planilha crítica ou uma rotina que consome tempo demais?",
       name: "Nome",
       email: "E-mail",
       message: "Mensagem",
@@ -209,9 +308,12 @@ export const dictionary = {
     },
     about: {
       title: "About Me",
-      body:
-        "I am a Systems Analysis and Development student working with data applied to purchasing and procurement. My practical experience in construction helps me identify real bottlenecks: repeated spreadsheets, reports that are hard to consolidate, manual quoting flows, and information scattered across inventory, projects, and suppliers. My work turns that scenario into practical tools, combining Python, React, FastAPI, SQLite, and automated document generation to create faster, traceable, and more reliable processes.",
-      pillars: ["Purchasing and procurement", "Process automation", "Direct interfaces"],
+      body: "I am a Systems Analysis and Development student working with data applied to purchasing and procurement. My practical experience in construction helps me identify real bottlenecks: repeated spreadsheets, reports that are hard to consolidate, manual quoting flows, and information scattered across inventory, projects, and suppliers. My work turns that scenario into practical tools, combining Python, React, FastAPI, SQLite, and automated document generation to create faster, traceable, and more reliable processes.",
+      pillars: [
+        "Purchasing and procurement",
+        "Process automation",
+        "Direct interfaces",
+      ],
     },
     experienceTitle: "Experience",
     experiences: [
@@ -222,7 +324,12 @@ export const dictionary = {
         period: "Jan/2026 - Current",
         description:
           "Development of Python tools to automate commercial proposals and quotes, removing manual report data extraction and generating standardized visual outputs. Work with SQL, Python, Power BI, and Excel to support purchasing strategy.",
-        highlights: ["Python automation", "SQL and data treatment", "Power BI and Excel", "Cost and supplier analysis"],
+        highlights: [
+          "Python automation",
+          "SQL and data treatment",
+          "Power BI and Excel",
+          "Cost and supplier analysis",
+        ],
       },
       {
         type: "Professional",
@@ -231,7 +338,12 @@ export const dictionary = {
         period: "Jul/2024 - Dec/2025",
         description:
           "Extraction, treatment, cleanup, and standardization of data with SQL, Excel, and Python. Consolidation of datasets for purchasing, production, and supply teams, creation of Power BI dashboards and KPIs, and support for quotes, purchase orders, pre-invoices, and master data.",
-        highlights: ["Dashboards and KPIs", "Purchasing and supply", "Master Data", "Automated reports"],
+        highlights: [
+          "Dashboards and KPIs",
+          "Purchasing and supply",
+          "Master Data",
+          "Automated reports",
+        ],
       },
       {
         type: "Professional",
@@ -240,7 +352,12 @@ export const dictionary = {
         period: "Jun/2023 - Oct/2023",
         description:
           "Development of applications with React Native and TypeScript, application of security best practices, version control with Git, and work in an agile Scrum environment. Exploration of AWS services with focus on the Well-Architected Framework.",
-        highlights: ["React Native", "TypeScript", "Git and Scrum", "AWS Well-Architected"],
+        highlights: [
+          "React Native",
+          "TypeScript",
+          "Git and Scrum",
+          "AWS Well-Architected",
+        ],
       },
       {
         type: "Academic",
@@ -249,7 +366,12 @@ export const dictionary = {
         period: "2022 - Current",
         description:
           "Higher education focused on programming, databases, web development, software engineering, and system building, connecting technical foundations with practical projects in automation, data, and interfaces.",
-        highlights: ["Programming", "Databases", "Web development", "Software engineering"],
+        highlights: [
+          "Programming",
+          "Databases",
+          "Web development",
+          "Software engineering",
+        ],
       },
       {
         type: "Academic",
@@ -258,7 +380,12 @@ export const dictionary = {
         period: "2018 - 2021",
         description:
           "Technical education in avionics systems, maintenance, diagnostic logic, and attention to critical processes, contributing to a disciplined view of operation, precision, and reliability.",
-        highlights: ["Avionics", "Technical maintenance", "Diagnostics", "Critical processes"],
+        highlights: [
+          "Avionics",
+          "Technical maintenance",
+          "Diagnostics",
+          "Critical processes",
+        ],
       },
     ],
     projectsTitle: "Projects",
@@ -282,11 +409,29 @@ export const dictionary = {
           "Administrative reports and documents required manual checking, data copied between files, and repeated steps prone to mistakes.",
         solution:
           "Scripts to read files, consolidate information, apply validation rules, and generate standardized documents automatically.",
-        technologies: ["Python", "Pandas", "OpenPyXL", "PDF/Docs", "Local automation"],
-        highlights: ["Data reading and cleanup", "Standardized document generation", "Less rework", "Simple administrative workflow"],
+        technologies: [
+          "Python",
+          "Pandas",
+          "OpenPyXL",
+          "PDF/Docs",
+          "Local automation",
+        ],
+        highlights: [
+          "Data reading and cleanup",
+          "Standardized document generation",
+          "Less rework",
+          "Simple administrative workflow",
+        ],
         gallery: [
-          { title: "Execution panel", caption: "Summary of processed routines and validation status." },
-          { title: "Document output", caption: "Final document generated from treated data and a standardized layout." },
+          {
+            title: "Execution panel",
+            caption: "Summary of processed routines and validation status.",
+          },
+          {
+            title: "Document output",
+            caption:
+              "Final document generated from treated data and a standardized layout.",
+          },
         ],
       },
       {
@@ -298,11 +443,30 @@ export const dictionary = {
           "The quoting process depended on scattered data, manual client/product records, and limited traceability between requests, items, and proposals.",
         solution:
           "A system with client and product records, authentication, quote building, and organized endpoints to keep the quoting flow centralized.",
-        technologies: ["React", "TypeScript", "FastAPI", "SQLAlchemy", "SQLite", "Alembic"],
-        highlights: ["Centralized quote flow", "Client and product records", "Protected backend routes", "Foundation ready to evolve"],
+        technologies: [
+          "React",
+          "TypeScript",
+          "FastAPI",
+          "SQLAlchemy",
+          "SQLite",
+          "Alembic",
+        ],
+        highlights: [
+          "Centralized quote flow",
+          "Client and product records",
+          "Protected backend routes",
+          "Foundation ready to evolve",
+        ],
         gallery: [
-          { title: "Catalog and products", caption: "Screen to search items and assemble proposals faster." },
-          { title: "Quote flow", caption: "Interface to connect client, products, and conditions in one quote." },
+          {
+            title: "Catalog and products",
+            caption: "Screen to search items and assemble proposals faster.",
+          },
+          {
+            title: "Quote flow",
+            caption:
+              "Interface to connect client, products, and conditions in one quote.",
+          },
         ],
       },
       {
@@ -315,10 +479,21 @@ export const dictionary = {
         solution:
           "Interface to configure data and layouts, with controlled rendering and PDF export through browser automation.",
         technologies: ["React", "Tailwind CSS", "Puppeteer", "Node.js", "PDF"],
-        highlights: ["Visual configuration", "PDF export", "More consistent commercial layout", "Fast editing workflow"],
+        highlights: [
+          "Visual configuration",
+          "PDF export",
+          "More consistent commercial layout",
+          "Fast editing workflow",
+        ],
         gallery: [
-          { title: "Visual editor", caption: "Area to adjust data, columns, and table appearance." },
-          { title: "PDF preview", caption: "Preview of the final layout before export." },
+          {
+            title: "Visual editor",
+            caption: "Area to adjust data, columns, and table appearance.",
+          },
+          {
+            title: "PDF preview",
+            caption: "Preview of the final layout before export.",
+          },
         ],
       },
       {
@@ -331,10 +506,21 @@ export const dictionary = {
         solution:
           "Dashboard with a backend that cross-references demands and inventory, exposing simple indicators to support purchasing, priority, and review.",
         technologies: ["React", "FastAPI", "SQLite", "Python", "Data Analysis"],
-        highlights: ["Material needs calculation", "Project-level view", "Inventory query", "Purchasing prioritization support"],
+        highlights: [
+          "Material needs calculation",
+          "Project-level view",
+          "Inventory query",
+          "Purchasing prioritization support",
+        ],
         gallery: [
-          { title: "Supply summary", caption: "Indicators for needs, stock, and criticality." },
-          { title: "Material list", caption: "Operational table comparing demand and availability." },
+          {
+            title: "Supply summary",
+            caption: "Indicators for needs, stock, and criticality.",
+          },
+          {
+            title: "Material list",
+            caption: "Operational table comparing demand and availability.",
+          },
         ],
       },
       {
@@ -346,11 +532,30 @@ export const dictionary = {
           "At events, service needs to be fast and clear, without complex navigation or tiny forms on touch screens.",
         solution:
           "Step-based interface with large components, guided flow, data capture, and focus on operation without keyboard or mouse.",
-        technologies: ["React", "Windows Kiosk", "Touch UI", "Local Storage", "UI/UX"],
-        highlights: ["Touch-first layout", "Guided flow", "Lead capture", "Fullscreen use"],
+        technologies: [
+          "React",
+          "Windows Kiosk",
+          "Touch UI",
+          "Local Storage",
+          "UI/UX",
+        ],
+        highlights: [
+          "Touch-first layout",
+          "Guided flow",
+          "Lead capture",
+          "Fullscreen use",
+        ],
         gallery: [
-          { title: "Touch home screen", caption: "Simple entry point with large actions and immediate reading." },
-          { title: "Capture and quote", caption: "Steps to register contact and generate a proposal quickly." },
+          {
+            title: "Touch home screen",
+            caption:
+              "Simple entry point with large actions and immediate reading.",
+          },
+          {
+            title: "Capture and quote",
+            caption:
+              "Steps to register contact and generate a proposal quickly.",
+          },
         ],
       },
       {
@@ -362,11 +567,29 @@ export const dictionary = {
           "A generic portfolio did not communicate the combination of web development, automation, and real experience with operational processes.",
         solution:
           "Responsive page with bilingual content, light/dark theme, minimalist/brutalist visuals, and a structure ready to detail each project.",
-        technologies: ["React", "Vite", "Tailwind CSS", "Context API", "Lucide Icons"],
-        highlights: ["Light/dark theme", "PT-BR and EN", "Reusable components", "Detailed project modal"],
+        technologies: [
+          "React",
+          "Vite",
+          "Tailwind CSS",
+          "Context API",
+          "Lucide Icons",
+        ],
+        highlights: [
+          "Light/dark theme",
+          "PT-BR and EN",
+          "Reusable components",
+          "Detailed project modal",
+        ],
         gallery: [
-          { title: "Responsive hero", caption: "First block with direct messaging, image, and technical stats." },
-          { title: "Interactive cards", caption: "Project grid with expanded details in a modal." },
+          {
+            title: "Responsive hero",
+            caption:
+              "First block with direct messaging, image, and technical stats.",
+          },
+          {
+            title: "Interactive cards",
+            caption: "Project grid with expanded details in a modal.",
+          },
         ],
       },
     ],
@@ -374,7 +597,14 @@ export const dictionary = {
     skills: [
       {
         title: "Front-end & UI",
-        items: ["React", "Vite", "Tailwind CSS", "TypeScript", "Context API", "Minimalist/brutalist design"],
+        items: [
+          "React",
+          "Vite",
+          "Tailwind CSS",
+          "TypeScript",
+          "Context API",
+          "Minimalist/brutalist design",
+        ],
       },
       {
         title: "Back-end & Data",
@@ -382,12 +612,20 @@ export const dictionary = {
       },
       {
         title: "Automation & Operations",
-        items: ["Puppeteer", "Git", "AWS", "PDF generation", "Kiosk applications", "Purchasing processes"],
+        items: [
+          "Puppeteer",
+          "Git",
+          "AWS",
+          "PDF generation",
+          "Kiosk applications",
+          "Purchasing processes",
+        ],
       },
     ],
     contact: {
       title: "Contact",
-      subtitle: "Do you have a manual process, a critical spreadsheet, or a routine that takes too much time?",
+      subtitle:
+        "Do you have a manual process, a critical spreadsheet, or a routine that takes too much time?",
       name: "Name",
       email: "Email",
       message: "Message",
