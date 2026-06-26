@@ -23,7 +23,7 @@ export const dictionary = {
     },
     about: {
       title: "Sobre Mim",
-      body: "Sou estudante de Análise e Desenvolvimento de Sistemas (ADS) com foco no desenvolvimento de automações e aplicações desktop. Atualmente, trabalho com dados aplicados a compras e suprimentos na Aulevi, onde utilizo minha bagagem no setor de construção civil para mapear e resolver ineficiências operacionais. Atuo desde a automação de processos manuais até a criação de sistemas interativos complexos, utilizando Python, React, FastAPI e SQLite. Meu diferencial é aliar uma arquitetura robusta a um design de interface minimalista e moderno, garantindo que fluxos de trabalho antes fragmentados se tornem sistemas unificados, rápidos e fáceis de usar.",
+      body: "Sou formando em Análise e Desenvolvimento de Sistemas (ADS) e atuo no desenvolvimento de sistemas completos, automações e soluções digitais para empresas. Atualmente, trabalho na Aulevi, unindo tecnologia, dados e experiência no setor da construção civil para identificar problemas operacionais e transformar processos manuais em soluções mais rápidas, organizadas e eficientes. Meu foco é criar sistemas personalizados, do backend ao frontend, com interfaces modernas, fáceis de usar e funcionalidades pensadas para resolver problemas reais do dia a dia. Busco desenvolver soluções que simplificam rotinas, centralizam informações e ajudam empresas a ganhar produtividade.",
       pillars: [
         "Construção Civil",
         "Automação de processos",

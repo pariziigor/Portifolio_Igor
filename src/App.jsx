@@ -7,6 +7,7 @@ import { ProjectModal } from "./components/ProjectModal.jsx";
 import { Section } from "./components/Section.jsx";
 import { SkillIcon } from "./components/SkillIcon.jsx";
 import { useI18n } from "./context/I18nContext.jsx";
+import profilePhoto from "./assets/minha-foto.jpeg";
 
 function App() {
   const { language, t } = useI18n();
@@ -40,15 +41,13 @@ function App() {
         <Hero />
 
         <Section id="about" kicker="01" title={t.about.title}>
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]">
-            <div className="reveal border-2 border-current bg-cyan p-5 text-ink shadow-brutalSm sm:p-6 sm:shadow-brutal">
-              <p className="font-display text-[clamp(2.5rem,14vw,4.5rem)] font-black uppercase leading-none">
-                Data.
-                <br />
-                Code.
-                <br />
-                Flow.
-              </p>
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,0.55fr)_minmax(0,1.45fr)]">
+            <div className="reveal w-full max-w-72 justify-self-center overflow-hidden border-2 border-current bg-paper shadow-brutalSm dark:bg-ink sm:max-w-80 sm:shadow-brutal lg:justify-self-start">
+              <img
+                src={profilePhoto}
+                alt={language === "pt" ? "Foto de perfil" : "Profile photo"}
+                className="block aspect-square w-full object-cover"
+              />
             </div>
             <p className="reveal max-w-4xl text-base font-medium leading-8 text-ink/78 dark:text-paper/78 sm:text-lg lg:text-xl lg:leading-9">
               {t.about.body}
