@@ -6,23 +6,23 @@ export function ContactForm() {
 
   return (
     <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
-      <div className="reveal flex min-w-0 flex-col justify-between border-2 border-current bg-acid p-5 text-ink shadow-brutalSm sm:p-6 sm:shadow-brutal">
+      <div className="reveal interactive-surface flex min-w-0 flex-col justify-between rounded-[2rem] border border-ink/10 bg-acid/70 p-5 text-ink shadow-glow backdrop-blur-2xl dark:border-white/10 sm:p-6">
         <div>
           <p className="break-words font-display text-2xl font-black leading-tight sm:text-3xl lg:text-4xl">{t.contact.subtitle}</p>
         </div>
         <div className="mt-8 grid gap-3 sm:mt-12 sm:flex sm:flex-wrap">
-          <a href="https://br.linkedin.com/in/igorparizi" className="button-secondary bg-paper" target="_blank" rel="noreferrer">
+          <a href="https://br.linkedin.com/in/igorparizi" className="button-secondary bg-white/65" target="_blank" rel="noreferrer">
             <Linkedin size={18} />
             {t.contact.linkedin}
           </a>
-          <a href="https://github.com/pariziigor" className="button-secondary bg-paper" target="_blank" rel="noreferrer">
+          <a href="https://github.com/pariziigor" className="button-secondary bg-white/65" target="_blank" rel="noreferrer">
             <Github size={18} />
             {t.contact.github}
           </a>
         </div>
       </div>
 
-      <form className="reveal min-w-0 border-2 border-current bg-paper p-5 text-ink shadow-brutalSm dark:bg-ink dark:text-paper sm:p-7 sm:shadow-brutal">
+      <form className="reveal glass-card min-w-0 p-5 text-ink dark:text-paper sm:p-7">
         <div className="grid gap-5 sm:grid-cols-2">
           <label className="field-label">
             {t.contact.name}
