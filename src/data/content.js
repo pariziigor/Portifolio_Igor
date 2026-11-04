@@ -155,42 +155,37 @@ export const dictionary = {
         ],
       },
       {
-        title: "Sistema de Orçamentos Automatizados",
+        title: "Site Institucional - Caragi",
         description:
-          "Plataforma full-stack responsiva que automatiza a elaboração de orçamentos estimativos, substituindo cálculos e processos manuais por um fluxo digital integrado. Criada inicialmente para totens de autoatendimento, evoluiu para uma solução web acessível de qualquer dispositivo.",
-        tags: ["React", "FastAPI", "Kiosk", "Automação", "Full-Stack"],
+          "Site institucional moderno e responsivo desenvolvido para a empresa Caragi, estruturado para apresentar soluções corporativas, fortalecer a presença digital da marca e facilitar o contato comercial com clientes e parceiros.",
+        tags: ["React", "TypeScript", "Tailwind CSS", "Front-End"],
         problem:
-          "O maior gargalo da operação era o tempo gasto para elaborar orçamentos de estimativa manualmente. O processo era lento, exigia cálculos complexos e gerava longas esperas para o cliente, o que inviabilizava um atendimento rápido e escalável, especialmente durante eventos e feiras.",
+          "A empresa precisava de uma presença digital profissional, rápida e alinhada à sua identidade visual para apresentar seus serviços com clareza e facilitar a captação de contatos.",
         solution:
-          "Sistema unificado que centraliza e automatiza a precificação. O usuário (ou o próprio cliente no autoatendimento) informa os parâmetros do projeto e a aplicação processa as regras de negócio instantaneamente. O que antes levava horas agora entrega uma estimativa completa em minutos, no totem ou no navegador do celular.",
+          "Desenvolvimento de uma aplicação web responsiva com React, TypeScript e Tailwind CSS, priorizando performance de carregamento, navegação fluida em dispositivos móveis e desktop, SEO e componentes modulares.",
         technologies: [
           "React",
           "TypeScript",
-          "Python",
-          "FastAPI",
-          "SQLite",
-          "SQLAlchemy",
-          "Alembic",
+          "Tailwind CSS",
+          "Vite",
           "Responsive Design",
         ],
         highlights: [
-          "Automação de cálculos e regras comerciais",
-          "Estimativas prontas em poucos minutos",
-          "Acesso web em qualquer dispositivo (celular, desktop ou totem)",
-          "Interface responsiva com fluxo guiado passo a passo",
-          "Captação de leads integrada à geração da proposta",
-          "Motor de cálculo centralizado no backend para garantir consistência",
+          "Interface moderna alinhada à identidade da marca",
+          "Layout 100% responsivo para mobile e desktop",
+          "Componentização limpa e tipada com TypeScript",
+          "Foco em performance, acessibilidade e SEO",
         ],
         gallery: [
           {
-            title: "Inserção de Parâmetros",
+            title: "Apresentação institucional",
             caption:
-              "Interface guiada onde as variáveis do projeto são inseridas rapidamente, sem complicação.",
+              "Seções claras destacando os diferenciais e serviços da Caragi.",
           },
           {
-            title: "Estimativa em Minutos",
+            title: "Experiência responsiva",
             caption:
-              "Cálculo processado automaticamente, entregando o orçamento completo e pronto para o cliente em tempo real.",
+              "Navegação adaptada para celulares, tablets e computadores.",
           },
         ],
       },
@@ -219,39 +214,6 @@ export const dictionary = {
             title: "Saída documental",
             caption:
               "Documento final gerado com dados tratados e layout padronizado.",
-          },
-        ],
-      },
-      {
-        title: "PriceTable Pro - Gestão de Tabelas de Preços",
-        description:
-          "Aplicação para organizar e configurar tabelas comerciais, estruturando produtos e preços e gerando PDFs de alta qualidade com apresentação padronizada para uso comercial e operacional.",
-        tags: ["React", "Puppeteer", "PDF"],
-        problem:
-          "Tabelas de preço precisam ser visualmente consistentes, mas editar layouts manualmente ou exportar arquivos com qualidade ruim atrasa o uso comercial.",
-        solution:
-          "Interface para configurar dados e layouts, com renderização controlada e exportação em PDF por automação de navegador.",
-        technologies: [
-          "React",
-          "TypeScript",
-          "Tailwind CSS",
-          "Node.js",
-          "Puppeteer",
-        ],
-        highlights: [
-          "Configuração visual das informações",
-          "Organização de produtos e preços",
-          "Geração automatizada de PDFs",
-          "Padronização de documentos comerciais",
-        ],
-        gallery: [
-          {
-            title: "Editor visual",
-            caption: "Área para ajustar dados, colunas e aparência da tabela.",
-          },
-          {
-            title: "Preview PDF",
-            caption: "Prévia do layout final antes da exportação.",
           },
         ],
       },
@@ -328,6 +290,9 @@ export const dictionary = {
       email: "E-mail",
       message: "Mensagem",
       submit: "Enviar Mensagem",
+      sending: "Enviando...",
+      success: "Mensagem enviada com sucesso! Responderei em breve.",
+      error: "Não foi possível enviar no momento. Tente novamente ou chame pelo LinkedIn.",
       linkedin: "LinkedIn",
       github: "GitHub",
     },
@@ -480,42 +445,37 @@ export const dictionary = {
         ],
       },
       {
-        title: "Automated Quoting System",
+        title: "Corporate Website - Caragi",
         description:
-          "A responsive full-stack platform that automates the creation of estimate quotes, replacing manual calculations and processes with an integrated digital flow. Initially built for self-service kiosks, it evolved into a web solution accessible from any device.",
-        tags: ["React", "FastAPI", "Kiosk", "Automation", "Full-Stack"],
+          "Modern and responsive corporate website built for Caragi, designed to present company solutions, strengthen brand presence online, and streamline commercial contact with clients and partners.",
+        tags: ["React", "TypeScript", "Tailwind CSS", "Front-End"],
         problem:
-          "The operation's biggest bottleneck was the time spent preparing estimate quotes by hand. The process was slow, required complex calculations, and left customers waiting, making fast and scalable service impossible, especially at events and trade shows.",
+          "The company needed a fast, professional digital presence aligned with its visual identity to clearly present its services and capture commercial leads.",
         solution:
-          "A unified system that centralizes and automates pricing. The user (or the customer at the kiosk) enters the project parameters and the application applies the business rules instantly. What used to take hours now produces a complete estimate in minutes, on the kiosk or on a phone browser.",
+          "Development of a responsive web application using React, TypeScript, and Tailwind CSS, focusing on fast load times, smooth navigation across mobile and desktop devices, SEO, and modular components.",
         technologies: [
           "React",
           "TypeScript",
-          "Python",
-          "FastAPI",
-          "SQLite",
-          "SQLAlchemy",
-          "Alembic",
+          "Tailwind CSS",
+          "Vite",
           "Responsive Design",
         ],
         highlights: [
-          "Automated calculations and commercial rules",
-          "Estimates ready in a few minutes",
-          "Web access on any device (mobile, desktop, or kiosk)",
-          "Responsive interface with a guided step-by-step flow",
-          "Lead capture built into proposal generation",
-          "Centralized backend calculation engine for consistency",
+          "Modern interface aligned with brand identity",
+          "Fully responsive layout for mobile and desktop",
+          "Clean, strongly typed component architecture with TypeScript",
+          "Focus on performance, accessibility, and SEO",
         ],
         gallery: [
           {
-            title: "Parameter Input",
+            title: "Corporate showcase",
             caption:
-              "A guided interface where project variables are entered quickly and without hassle.",
+              "Clear sections highlighting Caragi's differentiators and services.",
           },
           {
-            title: "Estimate in Minutes",
+            title: "Responsive experience",
             caption:
-              "Automatic calculation that delivers a complete, client-ready quote in real time.",
+              "Navigation tailored for phones, tablets, and desktops.",
           },
         ],
       },
@@ -544,39 +504,6 @@ export const dictionary = {
             title: "Document output",
             caption:
               "Final document generated from clean data with a standardized layout.",
-          },
-        ],
-      },
-      {
-        title: "PriceTable Pro - Price Table Management",
-        description:
-          "An application for organizing and configuring commercial price tables, structuring products and prices and generating high-quality PDFs with a consistent look for commercial and operational use.",
-        tags: ["React", "Puppeteer", "PDF"],
-        problem:
-          "Price tables must look consistent, but editing layouts by hand or exporting low-quality files slows down commercial use.",
-        solution:
-          "An interface to configure data and layouts, with controlled rendering and PDF export through browser automation.",
-        technologies: [
-          "React",
-          "TypeScript",
-          "Tailwind CSS",
-          "Node.js",
-          "Puppeteer",
-        ],
-        highlights: [
-          "Visual configuration of information",
-          "Product and price organization",
-          "Automated PDF generation",
-          "Standardized commercial documents",
-        ],
-        gallery: [
-          {
-            title: "Visual editor",
-            caption: "Area to adjust data, columns, and table appearance.",
-          },
-          {
-            title: "PDF preview",
-            caption: "Preview of the final layout before export.",
           },
         ],
       },
@@ -652,6 +579,9 @@ export const dictionary = {
       email: "Email",
       message: "Message",
       submit: "Send Message",
+      sending: "Sending...",
+      success: "Message sent! I'll get back to you soon.",
+      error: "Could not send your message right now. Please try again or reach out on LinkedIn.",
       linkedin: "LinkedIn",
       github: "GitHub",
     },
