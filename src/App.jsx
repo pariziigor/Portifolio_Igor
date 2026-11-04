@@ -12,7 +12,7 @@ import { ProjectCard } from "./components/ProjectCard.jsx";
 import { Section } from "./components/Section.jsx";
 import { SkillIcon } from "./components/SkillIcon.jsx";
 import { useI18n } from "./context/I18nContext.jsx";
-import profilePhoto from "./assets/minha-foto-optimized.jpg";
+import profilePhoto from "./assets/myprofile.jpg";
 
 // Ícone de cada grupo de habilidades (mesma ordem de `skills` em content.js)
 const skillGroupIcons = [MonitorSmartphone, ServerCog, Database, ChartNoAxesCombined];
@@ -75,26 +75,28 @@ function App() {
         <Hero />
 
         <Section id="about" kicker="01" title={t.about.title}>
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,0.55fr)_minmax(0,1.45fr)]">
-            <div className="reveal interactive-surface glass-card w-full max-w-72 justify-self-center overflow-hidden sm:max-w-80 lg:justify-self-start">
+          <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,0.55fr)_minmax(0,1.45fr)]">
+            <div className="reveal interactive-surface glass-card w-full max-w-72 self-start justify-self-center overflow-hidden sm:max-w-80 lg:justify-self-start">
               <img
                 src={profilePhoto}
                 alt={language === "pt" ? "Foto de perfil" : "Profile photo"}
-                className="block aspect-square w-full object-cover transition duration-500 hover:scale-105"
+                className="block aspect-[3/4] h-full w-full object-cover object-center transition duration-500 hover:scale-105"
                 loading="lazy"
                 decoding="async"
               />
             </div>
-            <p className="reveal max-w-4xl text-base font-medium leading-8 text-ink/78 dark:text-paper/78 sm:text-lg lg:text-xl lg:leading-9">
-              {t.about.body}
-            </p>
-            <div className="reveal lg:col-start-2">
-              <div className="flex flex-wrap gap-3">
-                {t.about.pillars.map((pillar) => (
-                  <span key={pillar} className="glass-pill max-w-full break-words px-3 py-2 font-mono text-xs font-bold uppercase tracking-wider transition duration-300 hover:-translate-y-0.5 hover:bg-acid hover:text-ink hover:shadow-glow sm:text-sm">
-                    {pillar}
-                  </span>
-                ))}
+            <div className="space-y-6">
+              <p className="reveal max-w-4xl whitespace-pre-line text-base font-medium leading-8 text-ink/78 dark:text-paper/78 sm:text-lg lg:text-xl lg:leading-9">
+                {t.about.body}
+              </p>
+              <div className="reveal">
+                <div className="flex flex-wrap gap-3">
+                  {t.about.pillars.map((pillar) => (
+                    <span key={pillar} className="glass-pill max-w-full break-words px-3 py-2 font-mono text-xs font-bold uppercase tracking-wider transition duration-300 hover:-translate-y-0.5 hover:bg-acid hover:text-ink hover:shadow-glow sm:text-sm">
+                      {pillar}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
