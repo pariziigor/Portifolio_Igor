@@ -17,7 +17,7 @@
   --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 
-  --blur: 20px;            /* intensidade do blur dos cards/vidro */
+  --blur: 16px;            /* intensidade do blur dos cards/vidro */
   --radius-card: 1.5rem;
   --section-py: clamp(3.5rem, 8vw, 6rem);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -91,10 +91,21 @@ body::after {
   content: "";
   position: fixed;
   inset: 0;
-  z-index: 90;
+  z-index: -1; /* atrás do conteúdo: não precisa ser recomposto sobre os cards */
   pointer-events: none;
   opacity: var(--grain-opacity);
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+/* Manchas de cor estáticas: dão ao vidro algo para desfocar (sem custo de animação) */
+.bg-blobs {
+  position: fixed;
+  inset: 0;
+  z-index: -3;
+  pointer-events: none;
+  background:
+    radial-gradient(40vmax 40vmax at 85% 15%, rgb(var(--c-violet) / 0.16), transparent 70%),
+    radial-gradient(45vmax 45vmax at 10% 75%, rgb(var(--c-acid) / 0.14), transparent 70%);
 }
 
 .bg-canvas {
@@ -129,7 +140,7 @@ html.is-loading {
    ========================================================= */
 @layer components {
   .icon-button {
-    @apply inline-flex h-10 min-w-10 shrink-0 items-center justify-center gap-1 rounded-full px-2 text-ink backdrop-blur-xl transition duration-300 hover:-translate-y-0.5 hover:bg-acid hover:text-ink hover:shadow-glow active:translate-y-0 dark:text-paper dark:hover:text-ink;
+    @apply inline-flex h-10 min-w-10 shrink-0 items-center justify-center gap-1 rounded-full px-2 text-ink transition duration-300 hover:-translate-y-0.5 hover:bg-acid hover:text-ink hover:shadow-glow active:translate-y-0 dark:text-paper dark:hover:text-ink;
     border: 1px solid var(--surface-border);
     background: var(--surface);
   }
@@ -139,7 +150,7 @@ html.is-loading {
   }
 
   .button-secondary {
-    @apply inline-flex w-full max-w-full items-center justify-center gap-2 rounded-full px-5 py-3 text-center font-display text-sm font-black uppercase backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:bg-acid/15 hover:shadow-glow active:translate-y-0 sm:w-auto;
+    @apply inline-flex w-full max-w-full items-center justify-center gap-2 rounded-full px-5 py-3 text-center font-display text-sm font-black uppercase transition duration-300 hover:-translate-y-1 hover:bg-acid/15 hover:shadow-glow active:translate-y-0 sm:w-auto;
     border: 1px solid var(--surface-border);
     background: var(--surface);
   }
@@ -175,7 +186,7 @@ html.is-loading {
   .glass-card,
   .glass-panel,
   .hero-stat-card {
-    @apply relative backdrop-blur-xl;
+    @apply relative;
     border-radius: var(--radius-card);
     border: 1px solid var(--surface-border);
     background: var(--surface);
@@ -233,22 +244,16 @@ html.is-loading {
   }
 
   .glass-pill {
-    @apply rounded-full backdrop-blur-xl;
+    @apply rounded-full;
     border: 1px solid var(--surface-border);
     background: var(--surface);
   }
 
   /* Blur (vidro fosco) em todos os componentes translúcidos */
+/* Apenas nos containers maiores (cada backdrop-filter é uma camada cara para a GPU) */
 .glass-card,
 .glass-panel,
-.hero-stat-card,
-.glass-pill,
-.icon-button,
-.button-secondary,
-.field-input,
-.project-modal-header,
-.project-modal-surface,
-.project-modal-preview {
+.hero-stat-card {
   -webkit-backdrop-filter: blur(var(--blur)) saturate(150%);
   backdrop-filter: blur(var(--blur)) saturate(150%);
 }
@@ -282,61 +287,6 @@ canvas {
 }
 .no-scrollbar::-webkit-scrollbar {
   display: none;
-}
-
-/* ---------- Scrollbar do modal ---------- */
-.modal-scroll {
-  scrollbar-width: thin;
-  scrollbar-color: rgb(var(--c-acid) / 0.4) transparent;
-}
-.modal-scroll::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-.modal-scroll::-webkit-scrollbar-track {
-  background: transparent;
-}
-.modal-scroll::-webkit-scrollbar-thumb {
-  background: rgb(var(--c-acid) / 0.4);
-  border: 3px solid transparent;
-  border-radius: 999px;
-  background-clip: content-box;
-}
-
-/* ---------- Modal ---------- */
-.project-modal-panel {
-  background: rgb(244 241 234 / 0.96);
-  border-color: rgb(255 255 255 / 0.72);
-  color: #07070d;
-}
-.project-modal-header {
-  background: rgb(255 255 255 / 0.64);
-  border-color: rgb(7 7 13 / 0.1);
-}
-.project-modal-surface {
-  background: rgb(255 255 255 / 0.68);
-  border-color: rgb(7 7 13 / 0.1);
-  color: #07070d;
-  box-shadow: none;
-}
-.project-modal-preview {
-  background: rgb(255 255 255 / 0.58);
-  border-color: rgb(255 255 255 / 0.72);
-  color: #07070d;
-}
-.dark .project-modal-panel {
-  background: rgb(10 10 18 / 0.92);
-  border-color: rgb(var(--c-acid) / 0.25);
-  color: rgb(var(--c-paper));
-  box-shadow: 0 0 80px rgb(var(--c-violet) / 0.18);
-}
-.dark .project-modal-header,
-.dark .project-modal-surface,
-.dark .project-modal-preview {
-  background: rgb(255 255 255 / 0.05);
-  border-color: rgb(255 255 255 / 0.1);
-  color: rgb(var(--c-paper));
-  box-shadow: none;
 }
 
 /* =========================================================
@@ -373,21 +323,14 @@ html.is-loaded .split-word > span {
 }
 
 /* Elementos do hero que entram depois do loader */
-.hero-in {
+/* Obs.: fill-mode "backwards" (não "both") — uma animação de opacity que permanece
+   aplicada transforma o elemento em "backdrop root" e quebra o blur dos filhos. */
+html:not(.is-loaded) .hero-in {
   opacity: 0;
-  transform: translate3d(0, 24px, 0);
 }
 html.is-loaded .hero-in {
-  animation: fade-up 900ms var(--ease-out) both;
+  animation: fade-up 900ms var(--ease-out) backwards;
   animation-delay: var(--d, 600ms);
-}
-
-/* Transição de página: app surge após o loader */
-.app-shell {
-  opacity: 0;
-}
-html.is-loaded .app-shell {
-  animation: fade-in 700ms ease-out both;
 }
 
 /* Loader */
@@ -469,7 +412,6 @@ html.has-custom-cursor textarea {
     transform 250ms ease-out,
     box-shadow 300ms ease,
     opacity 800ms var(--ease-out) var(--reveal-delay, 0ms);
-  will-change: transform;
 }
 
 /* Orbe decorativo do hero */
@@ -508,12 +450,6 @@ html.has-custom-cursor textarea {
   opacity: 1;
 }
 
-.modal-backdrop {
-  animation: fade-in 180ms ease-out both;
-}
-.modal-panel {
-  animation: panel-in 300ms var(--ease-out) both;
-}
 
 @keyframes word-up {
   from { transform: translate3d(0, 115%, 0); }
@@ -547,7 +483,6 @@ html.has-custom-cursor textarea {
   .reveal,
   html.reveal-ready .reveal:not(.is-visible),
   .hero-in,
-  .app-shell,
   .split-word > span {
     opacity: 1 !important;
     transform: none !important;
@@ -555,9 +490,7 @@ html.has-custom-cursor textarea {
     animation: none !important;
   }
   .hero-orb,
-  .hero-orb-core,
-  .modal-backdrop,
-  .modal-panel {
+  .hero-orb-core {
     animation: none;
   }
   [data-tilt] {

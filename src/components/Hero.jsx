@@ -22,7 +22,7 @@ export function Hero() {
       <div className="relative mx-auto flex min-h-[100svh] max-w-7xl items-center px-4 pb-12 pt-28 sm:px-6 md:pb-20 lg:px-8">
         <div className="w-full max-w-4xl">
           <p
-            className="hero-in mb-5 inline-flex max-w-full items-center gap-2 rounded-full border border-acid/40 bg-acid/10 px-4 py-2 font-mono text-[0.68rem] font-bold uppercase leading-snug tracking-wider text-ink shadow-glow backdrop-blur-xl dark:text-acid sm:text-xs"
+            className="hero-in mb-5 inline-flex max-w-full items-center gap-2 rounded-full border border-acid/40 bg-acid/10 px-4 py-2 font-mono text-[0.68rem] font-bold uppercase leading-snug tracking-wider text-ink shadow-glow dark:text-acid sm:text-xs"
             style={{ "--d": "300ms" }}
           >
             <span className="relative flex h-2 w-2" aria-hidden="true">

@@ -25,19 +25,52 @@ import {
   Workflow,
 } from "lucide-react";
 import {
+  siCss,
+  siDocker,
+  siElectron,
   siFastapi,
+  siFigma,
   siGit,
+  siGithub,
+  siHtml5,
+  siJavascript,
+  siLinux,
+  siMysql,
+  siNodedotjs,
+  siPandas,
+  siPostgresql,
   siPuppeteer,
   siPython,
   siReact,
+  siSqlalchemy,
   siSqlite,
+  siSupabase,
   siTailwindcss,
+  siTotvs,
   siTypescript,
   siVite,
 } from "simple-icons";
 
+// Chave = nome da habilidade normalizado (minúsculas, sem acento), como em content.js
 const brandIcons = {
   react: siReact,
+  "react native": siReact,
+  javascript: siJavascript,
+  "html/css": siHtml5,
+  html: siHtml5,
+  css: siCss,
+  "node.js": siNodedotjs,
+  electron: siElectron,
+  "totvs protheus": siTotvs,
+  postgresql: siPostgresql,
+  supabase: siSupabase,
+  mysql: siMysql,
+  pandas: siPandas,
+  sqlalchemy: siSqlalchemy,
+  "git/github": siGithub,
+  docker: siDocker,
+  linux: siLinux,
+  figma: siFigma,
   vite: siVite,
   "tailwind css": siTailwindcss,
   python: siPython,
@@ -87,7 +120,7 @@ function normalize(value) {
     .replace(/[\u0300-\u036f]/g, "");
 }
 
-export function SkillIcon({ name }) {
+export function SkillIcon({ name, className = "h-5 w-5 shrink-0" }) {
   const normalizedName = normalize(name);
   const brandIcon = brandIcons[normalizedName];
 
@@ -95,7 +128,7 @@ export function SkillIcon({ name }) {
     return (
       <svg
         viewBox="0 0 24 24"
-        className="h-5 w-5 shrink-0"
+        className={className}
         role="img"
         aria-label={brandIcon.title}
       >
@@ -109,5 +142,5 @@ export function SkillIcon({ name }) {
   );
   const Icon = fallback?.Icon || Layers;
 
-  return <Icon className="h-5 w-5 shrink-0" aria-hidden="true" />;
+  return <Icon className={className} aria-hidden="true" />;
 }

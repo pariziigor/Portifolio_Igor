@@ -29,6 +29,9 @@ export function Cursor() {
     const ringPos = { x: -100, y: -100 };
     const glowPos = { x: -100, y: -100 };
     let raf = 0;
+    let fxFrame = 0;
+    let visible = false;
+    let lastTarget = null;
     let lastTilt = null;
     let lastMag = null;
 
@@ -57,39 +60,50 @@ export function Cursor() {
     const onMove = (e) => {
       pos.x = e.clientX;
       pos.y = e.clientY;
-      [dot, ring, glow].forEach((r) => r.current.classList.add("cursor-visible"));
+      if (!visible) {
+        visible = true;
+        [dot, ring, glow].forEach((r) => r.current.classList.add("cursor-visible"));
+      }
       if (!raf) raf = requestAnimationFrame(tick);
+      lastTarget = e.target instanceof Element ? e.target : null;
+      // Agrupa as interações em 1x por frame (em vez de a cada evento do mouse)
+      if (!fxFrame) fxFrame = requestAnimationFrame(applyFx);
+    };
 
-      const target = e.target instanceof Element ? e.target : null;
+    const applyFx = () => {
+      fxFrame = 0;
+      const target = lastTarget;
+      const { x, y } = pos;
+      const card = target?.closest(".glass-card, .hero-stat-card") || null;
+      const tilt = target?.closest("[data-tilt]") || null;
+      const mag = target?.closest(MAGNETIC) || null;
+
+      // 1) Todas as leituras de layout primeiro...
+      const cardRect = card?.getBoundingClientRect();
+      const tiltRect = tilt?.getBoundingClientRect();
+      const magRect = mag?.getBoundingClientRect();
+
+      // 2) ...depois todas as escritas (evita "layout thrashing")
       ring.current.dataset.state = target?.closest(HOVERABLE) ? "hover" : "idle";
 
-      // Brilho nos cards
-      const card = target?.closest(".glass-card, .hero-stat-card");
       if (card) {
-        const r = card.getBoundingClientRect();
-        card.style.setProperty("--mx", `${e.clientX - r.left}px`);
-        card.style.setProperty("--my", `${e.clientY - r.top}px`);
+        card.style.setProperty("--mx", `${x - cardRect.left}px`);
+        card.style.setProperty("--my", `${y - cardRect.top}px`);
       }
 
-      // Tilt 3D
-      const tilt = target?.closest("[data-tilt]") || null;
       if (lastTilt && lastTilt !== tilt) resetTilt(lastTilt);
       if (tilt) {
-        const r = tilt.getBoundingClientRect();
-        const px = (e.clientX - r.left) / r.width - 0.5;
-        const py = (e.clientY - r.top) / r.height - 0.5;
-        tilt.style.setProperty("--rx", `${(-py * 8).toFixed(2)}deg`);
-        tilt.style.setProperty("--ry", `${(px * 8).toFixed(2)}deg`);
+        const px = (x - tiltRect.left) / tiltRect.width - 0.5;
+        const py = (y - tiltRect.top) / tiltRect.height - 0.5;
+        tilt.style.setProperty("--rx", `${(-py * 6).toFixed(2)}deg`);
+        tilt.style.setProperty("--ry", `${(px * 6).toFixed(2)}deg`);
       }
       lastTilt = tilt;
 
-      // Magnetismo
-      const mag = target?.closest(MAGNETIC) || null;
       if (lastMag && lastMag !== mag) resetMag(lastMag);
       if (mag) {
-        const r = mag.getBoundingClientRect();
-        const dx = (e.clientX - (r.left + r.width / 2)) * 0.25;
-        const dy = (e.clientY - (r.top + r.height / 2)) * 0.25;
+        const dx = (x - (magRect.left + magRect.width / 2)) * 0.2;
+        const dy = (y - (magRect.top + magRect.height / 2)) * 0.2;
         mag.style.translate = `${dx.toFixed(1)}px ${dy.toFixed(1)}px`;
       }
       lastMag = mag;
@@ -98,6 +112,7 @@ export function Cursor() {
     const onDown = () => (ring.current.dataset.state = "down");
     const onUp = () => (ring.current.dataset.state = "idle");
     const onLeave = () => {
+      visible = false;
       [dot, ring, glow].forEach((r) => r.current.classList.remove("cursor-visible"));
       if (lastTilt) resetTilt(lastTilt);
       if (lastMag) resetMag(lastMag);
@@ -106,10 +121,12 @@ export function Cursor() {
 
     // Parallax por scroll
     let scrollFrame = 0;
+    const parallaxEls = document.querySelectorAll("[data-parallax]");
     const parallax = () => {
       scrollFrame = 0;
       const y = window.scrollY;
-      document.querySelectorAll("[data-parallax]").forEach((el) => {
+      if (y > window.innerHeight * 1.5) return; // só anima enquanto o hero está por perto
+      parallaxEls.forEach((el) => {
         el.style.translate = `0 ${(y * Number(el.dataset.parallax)).toFixed(1)}px`;
       });
     };
@@ -127,6 +144,7 @@ export function Cursor() {
       root.classList.remove("has-custom-cursor");
       cancelAnimationFrame(raf);
       cancelAnimationFrame(scrollFrame);
+      cancelAnimationFrame(fxFrame);
       window.removeEventListener("pointermove", onMove);
       window.removeEventListener("pointerdown", onDown);
       window.removeEventListener("pointerup", onUp);

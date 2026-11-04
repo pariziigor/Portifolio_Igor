@@ -1,4 +1,5 @@
-import { lazy, Suspense, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { ChartNoAxesCombined, Database, Layers, MonitorSmartphone, ServerCog } from "lucide-react";
 import { ContactForm } from "./components/ContactForm.jsx";
 import { Footer, ProjectFilter, ScrollProgress } from "./components/Extras.jsx";
 import { Header } from "./components/Header.jsx";
@@ -13,30 +14,16 @@ import { SkillIcon } from "./components/SkillIcon.jsx";
 import { useI18n } from "./context/I18nContext.jsx";
 import profilePhoto from "./assets/minha-foto-optimized.jpg";
 
-const ProjectModal = lazy(() =>
-  import("./components/ProjectModal.jsx").then((module) => ({
-    default: module.ProjectModal,
-  }))
-);
+// Ícone de cada grupo de habilidades (mesma ordem de `skills` em content.js)
+const skillGroupIcons = [MonitorSmartphone, ServerCog, Database, ChartNoAxesCombined];
 
 function App() {
   const { language, t } = useI18n();
-  const [selectedProjectIndex, setSelectedProjectIndex] = useState(null);
   const [activeTag, setActiveTag] = useState(null);
-  const lenisRef = useSmoothScroll();
-
-  // Pausa o smooth scroll enquanto o modal está aberto
-  useEffect(() => {
-    const lenis = lenisRef.current;
-    if (!lenis) return;
-    if (selectedProjectIndex === null) lenis.start();
-    else lenis.stop();
-  }, [selectedProjectIndex, lenisRef]);
+  useSmoothScroll();
   const allTags = [...new Set(t.projects.flatMap((project) => project.tags))];
 
   useEffect(() => setActiveTag(null), [language]);
-  const selectedProject =
-    selectedProjectIndex === null ? null : t.projects[selectedProjectIndex];
 
   useEffect(() => {
     document.documentElement.lang = language === "pt" ? "pt-BR" : "en";
@@ -83,7 +70,6 @@ function App() {
       <Loader />
       <Background />
       <Cursor />
-      <div className="app-shell">
       <Header />
       <main>
         <Hero />
@@ -165,41 +151,40 @@ function App() {
           <div className="grid gap-6 md:grid-cols-2">
             {t.projects.map((project, index) =>
               activeTag && !project.tags.includes(activeTag) ? null : (
-                <ProjectCard
-                  key={project.title}
-                  project={project}
-                  index={index}
-                  detailsLabel={t.projectDetails.open}
-                  onSelect={() => setSelectedProjectIndex(index)}
-                />
+                <ProjectCard key={project.title} project={project} index={index} />
               )
             )}
           </div>
         </Section>
 
         <Section id="skills" kicker="04" title={t.skillsTitle}>
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4 xl:gap-5">
-            {t.skills.map((group) => (
-              <article
-                key={group.title}
-                    className="reveal interactive-surface glass-card min-w-0 p-5"
-              >
-                <h3 className="break-words font-display text-xl font-black sm:text-2xl">{group.title}</h3>
-                <ul className="mt-6 grid gap-3">
-                  {group.items.map((item) => (
-                    <li
-                      key={item}
-                      className="group glass-pill flex min-w-0 items-center gap-3 px-3 py-3 font-bold transition duration-300 hover:-translate-y-0.5 hover:bg-acid/80 hover:text-ink hover:shadow-glow"
-                    >
-                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-acid/90 text-ink shadow-glow transition duration-300 group-hover:rotate-3 group-hover:scale-105">
-                        <SkillIcon name={item} />
-                      </span>
-                      <span className="min-w-0 break-words">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
+          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            {t.skills.map((group, index) => {
+              const GroupIcon = skillGroupIcons[index] || Layers;
+              return (
+                <article key={group.title} className="reveal interactive-surface glass-card flex min-w-0 flex-col p-6">
+                  <div className="relative z-10 flex items-center justify-between">
+                    <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-acid/15 text-acid ring-1 ring-acid/30">
+                      <GroupIcon size={22} aria-hidden="true" />
+                    </span>
+                    <span className="font-mono text-xs font-bold text-ink/40 dark:text-paper/40">{`0${index + 1}`}</span>
+                  </div>
+                  <h3 className="relative z-10 mt-5 font-display text-xl font-bold sm:text-2xl">{group.title}</h3>
+                  <p className="relative z-10 mt-2 text-sm leading-6 text-ink/65 dark:text-paper/60">{group.description}</p>
+                  <ul className="relative z-10 mt-6 flex flex-wrap gap-2 border-t border-ink/10 pt-5 dark:border-white/10">
+                    {group.items.map((item) => (
+                      <li
+                        key={item}
+                        className="glass-pill inline-flex items-center gap-2 px-3 py-1.5 text-sm font-semibold transition duration-300 hover:-translate-y-0.5 hover:border-acid/50 hover:text-acid"
+                      >
+                        <SkillIcon name={item} className="h-4 w-4 shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              );
+            })}
           </div>
         </Section>
 
@@ -209,17 +194,6 @@ function App() {
       </main>
       <Footer />
       <ScrollProgress />
-      </div>
-
-      {selectedProject ? (
-        <Suspense fallback={null}>
-          <ProjectModal
-            project={selectedProject}
-            labels={t.projectDetails}
-            onClose={() => setSelectedProjectIndex(null)}
-          />
-        </Suspense>
-      ) : null}
     </div>
   );
 }

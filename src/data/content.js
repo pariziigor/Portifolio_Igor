@@ -9,55 +9,55 @@ export const dictionary = {
       "Contato",
     ],
     hero: {
-      eyebrow: "Dados / Automação / Sistemas web",
-      title: "Transformo rotinas operacionais em sistemas claros.",
+      eyebrow: "Desenvolvimento Full Stack / Automação / Tecnologia aplicada a negócios",
+      title: "Desenvolvo sistemas que transformam processos em resultados.",
       subtitle:
-        "Crio automações, dashboards e interfaces modernas para reduzir trabalho manual, organizar dados e acelerar processos.",
+        "Crio aplicações, automações e soluções digitais que conectam tecnologia às necessidades reais das empresas. Do desenvolvimento de sistemas à integração de dados, meu trabalho é simplificar operações, eliminar tarefas repetitivas e construir ferramentas que tornam o dia a dia mais eficiente.",
       primary: "Ver Projetos",
       secondary: "Entrar em Contato",
       stats: [
-        { value: "React", label: "interfaces responsivas" },
-        { value: "Python", label: "automação e dados" },
-        { value: "FastAPI", label: "backends objetivos" },
+        { value: "Full Stack", label: "web, desktop e APIs" },
+        { value: "Automação", label: "processos e integrações" },
+        { value: "Dados", label: "dashboards e indicadores" },
       ],
     },
     about: {
       title: "Sobre Mim",
-      body: "Sou formando em Análise e Desenvolvimento de Sistemas (ADS) e atuo no desenvolvimento de sistemas completos, automações e soluções digitais para empresas. Atualmente, trabalho na Aulevi, unindo tecnologia, dados e experiência no setor da construção civil para identificar problemas operacionais e transformar processos manuais em soluções mais rápidas, organizadas e eficientes. Meu foco é criar sistemas personalizados, do backend ao frontend, com interfaces modernas, fáceis de usar e funcionalidades pensadas para resolver problemas reais do dia a dia. Busco desenvolver soluções que simplificam rotinas, centralizam informações e ajudam empresas a ganhar produtividade.",
+      body: "Sou Desenvolvedor Full Stack Júnior e estudante de Análise e Desenvolvimento de Sistemas no IFSP São Carlos. Minha trajetória combina desenvolvimento de software, automação de processos e análise de dados, com experiência na construção de soluções tecnológicas para ambientes empresariais.\n\nAtualmente, trabalho na Aulevi, participando do desenvolvimento e da evolução do ecossistema ALV, um conjunto de sistemas internos que conecta as áreas comercial e operacional. Atuo na criação de aplicações web e desktop, APIs, integrações com sistemas corporativos (como o TOTVS Protheus), dashboards e ferramentas de automação, transformando necessidades do negócio em soluções funcionais e sustentáveis.\n\nTenho interesse especial em sistemas que simplificam processos, centralizam informações e apoiam a tomada de decisão. Mais do que escrever código, gosto de entender o problema, estruturar a solução e acompanhar sua aplicação na prática. Acredito que a tecnologia deve ser funcional, acessível e, principalmente, capaz de gerar resultados reais.",
       pillars: [
-        "Construção Civil",
+        "Desenvolvimento Full Stack",
         "Automação de processos",
-        "Desenvolvimento de sistemas",
+        "Dados e Business Intelligence",
       ],
     },
     experienceTitle: "Experiência",
     experiences: [
       {
         type: "Profissional",
-        role: "Estagiário - Compras / Dados / Automação",
+        role: "Desenvolvedor Full Stack Júnior",
         place: "Aulevi - São Carlos, SP",
         period: "Jan/2026 - Atual",
         description:
-          "Apoio estratégico à área de compras e suprimentos unindo inteligência de dados e desenvolvimento de software. Atuo desde a análise de dados com SQL, Power BI e Excel até a concepção de sistemas completos e ferramentas em Python. Meu foco é a automação de processos manuais de ponta a ponta, substituindo rotinas lentas de extração de dados por sistemas unificados que entregam informações rápidas e saídas visuais padronizadas.",
+          "Desenvolvimento e evolução de sistemas internos, aplicações web e ferramentas de automação para apoiar os processos comerciais e operacionais da empresa. Participo do levantamento de necessidades, da definição das soluções, do desenvolvimento de funcionalidades, da integração com bancos de dados e sistemas corporativos e da manutenção dos sistemas em produção, do front-end às APIs e à persistência de dados.",
         highlights: [
-          "Desenvolvimento de Sistemas",
-          "SQL e tratamento de dados",
-          "Power BI e Excel",
-          "Análise de custos e fornecedores",
+          "Desenvolvimento Full Stack do ecossistema ALV",
+          "Gestão de clientes, produtos, orçamentos e pedidos",
+          "APIs e integrações (incluindo TOTVS Protheus)",
+          "Automação de rotinas e dashboards",
         ],
       },
       {
         type: "Profissional",
-        role: "Estagiário - Compras / Dados",
+        role: "Estagiário - Compras / Dados / Automação",
         place: "Simple Wall / Smart Pods - São Carlos, SP",
         period: "Jul/2024 - Dez/2025",
         description:
-          "Combino a análise técnica de dados com a execução operacional no setor de suprimentos. Utilizo SQL, Python e Excel para extrair e higienizar bases, consolidando informações críticas que são visualizadas através de dashboards e KPIs no Power BI. Toda essa estrutura tecnológica que desenvolvo serve de alicerce para dar agilidade e segurança às atividades diárias de compras, apoiando ativamente em cotações, ordens de compra, processos de pré-notas e gestão de Master Data.",
+          "Atuação na área de compras e suprimentos, usando tecnologia e análise de dados para melhorar processos operacionais. Desenvolvimento de ferramentas para tratamento de informações, automatização de relatórios e construção de indicadores no Power BI para apoiar decisões e atividades do setor, com apoio em cotações, ordens de compra, pré-notas e gestão de Master Data.",
         highlights: [
-          "Dashboards e KPIs",
-          "Compras e suprimentos",
-          "Master Data",
-          "Relatórios automatizados",
+          "Análise e tratamento de dados",
+          "SQL, Python e Excel",
+          "Dashboards e KPIs no Power BI",
+          "Compras, suprimentos e Master Data",
         ],
       },
       {
@@ -66,12 +66,12 @@ export const dictionary = {
         place: "Compass UOL - Remoto",
         period: "Jun/2023 - Out/2023",
         description:
-          "Foco na construção de aplicações seguras, estáveis e bem estruturadas. Desenvolvo ecossistemas utilizando React Native e TypeScript para garantir um código limpo e livre de ambiguidades estruturais. Trabalho de forma integrada a ambientes ágeis (Scrum), gerenciando entregas com Git e aplicando rigorosos padrões de segurança de ponta a ponta. No aspecto de infraestrutura, apoio-me no AWS Well-Architected Framework para explorar serviços em nuvem e projetar soluções preparadas para escalar de forma eficiente.",
+          "Desenvolvimento de aplicações com React Native e TypeScript, em equipe e com metodologias ágeis (Scrum). Contato com versionamento de código, documentação de componentes e conceitos de arquitetura e infraestrutura em nuvem, com base no AWS Well-Architected Framework.",
         highlights: [
-          "React Native",
-          "TypeScript",
-          "Git e Scrum",
-          "AWS Well-Architected",
+          "React Native e TypeScript",
+          "Git e GitHub",
+          "Metodologias ágeis (Scrum)",
+          "Storybook e fundamentos de AWS",
         ],
       },
       {
@@ -116,17 +116,57 @@ export const dictionary = {
     },
     projects: [
       {
-        title: "Sistema de Orçamento Estimativo Automatizado",
+        title: "ALV - Plataforma de Gestão Operacional",
         description:
-          "Plataforma full-stack responsiva projetada para eliminar o tempo gasto na criação de orçamentos manuais. Através da inserção de parâmetros específicos, o sistema gera estimativas de custo automaticamente em poucos minutos. Criado inicialmente para uso em totens de autoatendimento, o sistema é acessível via web a partir de qualquer dispositivo com internet.",
-        tags: ["React", "FastAPI", "Kiosk", "Automação", "Full-Stack"],
+          "Plataforma empresarial que integra e organiza processos internos, conectando as áreas comercial e operacional em um ambiente centralizado. Contempla módulos de gestão comercial, acompanhamento de processos, operações e logística, com fluxos de trabalho, controle de acesso e rastreabilidade das atividades.",
+        tags: ["React", "FastAPI", "PostgreSQL", "Supabase", "Full-Stack"],
         problem:
-          "O maior gargalo da operação era o tempo elevado gasto para elaborar orçamentos de estimativa manualmente. O processo era lento, exigia cálculos complexos e gerava longas esperas para o cliente, o que inviabilizava um atendimento rápido e escalável, especialmente durante eventos e feiras.",
+          "Informações e processos espalhados entre planilhas, sistemas e áreas diferentes dificultavam o acompanhamento das etapas, a rastreabilidade e a tomada de decisão.",
         solution:
-          "Desenvolvimento de um sistema unificado que centraliza e automatiza a precificação. O usuário (ou o próprio cliente no autoatendimento) insere os parâmetros do projeto, e a aplicação processa as regras de negócio instantaneamente. O que antes levava horas, agora entrega um orçamento estimativo completo em minutos, seja no totem ou no navegador do celular.",
+          "Desenvolvimento de módulos independentes e integrados em um único ecossistema, com gestão de processos, controle de permissões e responsabilidades, integração com sistemas corporativos e automação de atividades.",
         technologies: [
           "React",
           "TypeScript",
+          "Python",
+          "FastAPI",
+          "PostgreSQL",
+          "Supabase",
+          "SQL",
+        ],
+        highlights: [
+          "Módulos independentes e integrados",
+          "Gestão de processos e acompanhamento de etapas",
+          "Controle de permissões e responsabilidades",
+          "Integração entre áreas operacionais e sistemas corporativos",
+          "Automação de atividades e centralização de informações",
+          "Interfaces web e APIs",
+        ],
+        gallery: [
+          {
+            title: "Acompanhamento de processos",
+            caption:
+              "Visão organizada das etapas e responsáveis de cada processo.",
+          },
+          {
+            title: "Módulos integrados",
+            caption:
+              "Áreas comercial e operacional conectadas em um só ambiente.",
+          },
+        ],
+      },
+      {
+        title: "Sistema de Orçamentos Automatizados",
+        description:
+          "Plataforma full-stack responsiva que automatiza a elaboração de orçamentos estimativos, substituindo cálculos e processos manuais por um fluxo digital integrado. Criada inicialmente para totens de autoatendimento, evoluiu para uma solução web acessível de qualquer dispositivo.",
+        tags: ["React", "FastAPI", "Kiosk", "Automação", "Full-Stack"],
+        problem:
+          "O maior gargalo da operação era o tempo gasto para elaborar orçamentos de estimativa manualmente. O processo era lento, exigia cálculos complexos e gerava longas esperas para o cliente, o que inviabilizava um atendimento rápido e escalável, especialmente durante eventos e feiras.",
+        solution:
+          "Sistema unificado que centraliza e automatiza a precificação. O usuário (ou o próprio cliente no autoatendimento) informa os parâmetros do projeto e a aplicação processa as regras de negócio instantaneamente. O que antes levava horas agora entrega uma estimativa completa em minutos, no totem ou no navegador do celular.",
+        technologies: [
+          "React",
+          "TypeScript",
+          "Python",
           "FastAPI",
           "SQLite",
           "SQLAlchemy",
@@ -134,47 +174,41 @@ export const dictionary = {
           "Responsive Design",
         ],
         highlights: [
-          "Cálculo automatizado de orçamentos com base em parâmetros",
-          "Redução do tempo de resposta (estimativas prontas em minutos)",
-          "Acesso universal via web em qualquer dispositivo (mobile, desktop ou totem)",
-          "Interface de alta usabilidade com fluxo guiado passo a passo",
-          "Captação de leads integrada diretamente à geração da proposta",
+          "Automação de cálculos e regras comerciais",
+          "Estimativas prontas em poucos minutos",
+          "Acesso web em qualquer dispositivo (celular, desktop ou totem)",
+          "Interface responsiva com fluxo guiado passo a passo",
+          "Captação de leads integrada à geração da proposta",
           "Motor de cálculo centralizado no backend para garantir consistência",
         ],
         gallery: [
           {
             title: "Inserção de Parâmetros",
             caption:
-              "Interface guiada e escalável onde as variáveis do projeto são inseridas rapidamente, sem complicação.",
+              "Interface guiada onde as variáveis do projeto são inseridas rapidamente, sem complicação.",
           },
           {
             title: "Estimativa em Minutos",
             caption:
-              "Cálculo processado automaticamente pelo sistema, entregando o orçamento completo e pronto para o cliente em tempo real.",
+              "Cálculo processado automaticamente, entregando o orçamento completo e pronto para o cliente em tempo real.",
           },
         ],
       },
       {
         title: "Automação de Relatórios e Documentos",
         description:
-          "Ferramentas em Python para ler relatórios, organizar dados operacionais e gerar documentos automaticamente. O foco é cortar tarefas repetitivas, padronizar saídas e reduzir erros em processos administrativos.",
+          "Ferramentas em Python para automatizar tarefas administrativas e operacionais. As soluções fazem a leitura, o tratamento, a consolidação e a validação de dados, além da geração automática de relatórios e documentos padronizados.",
         tags: ["Python", "Data Analysis", "Automation"],
         problem:
           "Relatórios e documentos administrativos exigiam conferência manual, cópia de dados entre arquivos e repetição de etapas sujeitas a erro.",
         solution:
-          "Criação de scripts para ler arquivos, consolidar informações, aplicar regras de validação e gerar documentos padronizados de forma automática.",
-        technologies: [
-          "Python",
-          "Pandas",
-          "OpenPyXL",
-          "PDF/Docs",
-          "Automação local",
-        ],
+          "Criação de scripts que leem arquivos, consolidam informações, aplicam regras de validação e geram documentos padronizados de forma automática.",
+        technologies: ["Python", "Pandas", "OpenPyXL", "SQL", "PDF/Docs"],
         highlights: [
-          "Leitura e limpeza de dados",
-          "Geração padronizada de documentos",
-          "Redução de retrabalho",
-          "Fluxo simples para uso administrativo",
+          "Processamento automatizado de planilhas",
+          "Tratamento e consolidação de dados",
+          "Geração padronizada de relatórios e documentos",
+          "Redução de tarefas manuais e retrabalho",
         ],
         gallery: [
           {
@@ -189,20 +223,26 @@ export const dictionary = {
         ],
       },
       {
-        title: "PriceTable Pro",
+        title: "PriceTable Pro - Gestão de Tabelas de Preços",
         description:
-          "Plataforma para criação e gestão de tabelas de preços, com configuração visual dos dados e exportação de layouts em PDF de alta qualidade para uso comercial e operacional.",
+          "Aplicação para organizar e configurar tabelas comerciais, estruturando produtos e preços e gerando PDFs de alta qualidade com apresentação padronizada para uso comercial e operacional.",
         tags: ["React", "Puppeteer", "PDF"],
         problem:
           "Tabelas de preço precisam ser visualmente consistentes, mas editar layouts manualmente ou exportar arquivos com qualidade ruim atrasa o uso comercial.",
         solution:
-          "Interface para configurar dados e layouts, com renderização controlada e exportação em PDF usando automação de navegador.",
-        technologies: ["React", "Tailwind CSS", "Puppeteer", "Node.js", "PDF"],
+          "Interface para configurar dados e layouts, com renderização controlada e exportação em PDF por automação de navegador.",
+        technologies: [
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Node.js",
+          "Puppeteer",
+        ],
         highlights: [
-          "Configuração visual",
-          "Exportação em PDF",
-          "Layout comercial mais consistente",
-          "Fluxo pensado para edição rápida",
+          "Configuração visual das informações",
+          "Organização de produtos e preços",
+          "Geração automatizada de PDFs",
+          "Padronização de documentos comerciais",
         ],
         gallery: [
           {
@@ -218,12 +258,12 @@ export const dictionary = {
       {
         title: "Portfólio Interativo",
         description:
-          "Este site foi estruturado com Vite, Tailwind CSS, troca de idioma, tema claro/escuro e componentes reutilizáveis para apresentar projetos técnicos com visual moderno e direto.",
+          "Este site, desenvolvido para apresentar experiências e projetos de forma organizada, responsiva e acessível, com troca de idioma, tema claro/escuro e componentes reutilizáveis.",
         tags: ["Vite", "Tailwind CSS", "i18n"],
         problem:
-          "Um portfólio genérico não mostrava bem a combinação entre desenvolvimento web, automação e experiência real com processos operacionais.",
+          "Um portfólio genérico não mostrava bem a combinação entre desenvolvimento de sistemas, automação e experiência real com processos empresariais.",
         solution:
-          "Construção de uma página responsiva com conteúdo bilíngue, tema claro/escuro, visual minimalista/brutalista e estrutura pronta para detalhar cada projeto.",
+          "Página responsiva com conteúdo bilíngue, tema claro/escuro e estrutura pronta para detalhar cada projeto.",
         technologies: [
           "React",
           "Vite",
@@ -232,16 +272,16 @@ export const dictionary = {
           "Lucide Icons",
         ],
         highlights: [
-          "Tema claro/escuro",
-          "PT-BR e EN",
-          "Componentes reutilizáveis",
-          "Modal detalhado por projeto",
+          "Interface responsiva",
+          "Temas claro e escuro",
+          "Português e inglês",
+          "Apresentação interativa dos projetos",
         ],
         gallery: [
           {
             title: "Hero responsivo",
             caption:
-              "Primeiro bloco com mensagem direta, imagem e estatísticas técnicas.",
+              "Primeiro bloco com mensagem direta e destaques de atuação.",
           },
           {
             title: "Cards interativos",
@@ -253,64 +293,37 @@ export const dictionary = {
     skillsTitle: "Habilidades",
     skills: [
       {
-        title: "Desenvolvimento",
-        items: [
-          "Sistemas web modernos",
-          "Interfaces responsivas",
-          "Aplicações para totens",
-          "Experiência do usuário",
-          "Design limpo e minimalista",
-          "Fluxos intuitivos",
-        ],
+        title: "Front-end",
+        description: "Interfaces responsivas, rápidas e fáceis de usar — da web a totens de autoatendimento.",
+        items: ["React", "TypeScript", "JavaScript", "HTML/CSS", "Tailwind CSS", "React Native"],
       },
       {
-        title: "Sistemas e Integrações",
-        items: [
-          "Desenvolvimento back-end",
-          "APIs REST",
-          "Autenticação de usuários",
-          "Módulos de ERP",
-          "Integração com sistemas externos",
-          "Regras de negócio",
-        ],
+        title: "Back-end & Integrações",
+        description: "APIs, regras de negócio e integrações com ERP e sistemas desktop.",
+        items: ["Python", "FastAPI", "Node.js", "APIs REST", "TOTVS Protheus", "Electron"],
       },
       {
-        title: "Dados e Automação",
-        items: [
-          "Dashboards gerenciais",
-          "Análise de dados",
-          "Automação de processos",
-          "Relatórios operacionais",
-          "Geração automática de PDFs",
-          "Melhoria de fluxos internos",
-        ],
+        title: "Banco de Dados",
+        description: "Modelagem, consultas e persistência de dados relacionais.",
+        items: ["PostgreSQL", "Supabase", "MySQL", "SQLite", "SQL"],
       },
       {
-        title: "Stack técnica",
-        items: [
-          "React",
-          "TypeScript",
-          "Python",
-          "FastAPI",
-          "SQLite",
-          "Tailwind CSS",
-          "Vite",
-          "Puppeteer",
-          "Git",
-        ],
+        title: "Dados, BI & Ferramentas",
+        description: "Análise, dashboards e o ferramental do dia a dia de desenvolvimento.",
+        items: ["Power BI", "Excel", "Pandas", "Git/GitHub", "Docker", "Linux", "Figma"],
       },
     ],
     ui: {
       all: "Todos",
       filterLabel: "Filtrar projetos por tecnologia",
-      available: "Aberto a oportunidades",
+      available: "Disponível para conexões profissionais",
       footer: "Feito com React, Vite e Tailwind CSS.",
       backToTop: "Voltar ao topo",
     },
     contact: {
       title: "Contato",
       subtitle:
-        "Tem um processo manual, uma planilha crítica ou uma rotina que consome tempo demais?",
+        "Vamos transformar ideias em soluções? Se você quer trocar experiências, conversar sobre tecnologia ou desenvolver uma solução, entre em contato. Vamos construir algo juntos.",
       name: "Nome",
       email: "E-mail",
       message: "Mensagem",
@@ -322,55 +335,55 @@ export const dictionary = {
   en: {
     nav: ["Home", "About", "Experience", "Projects", "Skills", "Contact"],
     hero: {
-      eyebrow: "Data / Automation / Web systems",
-      title: "I turn operational routines into clear systems.",
+      eyebrow: "Full Stack Development / Automation / Technology for Business",
+      title: "I build systems that turn processes into results.",
       subtitle:
-        "I build automations, dashboards, and modern interfaces to reduce manual work, organize data, and accelerate processes.",
+        "I create applications, automations, and digital solutions that connect technology to real business needs. From system development to data integration, my work is to simplify operations, eliminate repetitive tasks, and build tools that make everyday work more efficient.",
       primary: "View Projects",
       secondary: "Get in Touch",
       stats: [
-        { value: "React", label: "responsive interfaces" },
-        { value: "Python", label: "automation and data" },
-        { value: "FastAPI", label: "focused backends" },
+        { value: "Full Stack", label: "web, desktop, and APIs" },
+        { value: "Automation", label: "processes and integrations" },
+        { value: "Data", label: "dashboards and metrics" },
       ],
     },
     about: {
       title: "About Me",
-      body: "I am graduating in Systems Analysis and Development (ADS) and work in the development of full systems, automations, and digital solutions for companies. Currently, I work at Aulevi, combining technology, data, and experience in the civil construction sector to identify operational problems and transform manual processes into faster, organized, and more efficient solutions. My focus is on creating customized systems, from backend to frontend, with modern, easy-to-use interfaces and features designed to solve real everyday problems. I seek to develop solutions that simplify routines, centralize information, and help companies gain productivity.",
+      body: "I am a Junior Full Stack Developer and a Systems Analysis and Development student at IFSP São Carlos. My background combines software development, process automation, and data analysis, with hands-on experience building technology solutions for business environments.\n\nI currently work at Aulevi, helping develop and evolve the ALV ecosystem, a set of internal systems that connects the commercial and operational areas. I build web and desktop applications, APIs, integrations with enterprise systems (such as TOTVS Protheus), dashboards, and automation tools, turning business needs into functional, sustainable solutions.\n\nI have a particular interest in systems that simplify processes, centralize information, and support better decision-making. More than writing code, I enjoy understanding the problem, designing the solution, and seeing it work in practice. I believe technology should be functional, accessible, and above all capable of delivering real results.",
       pillars: [
-        "Civil Construction",
+        "Full Stack development",
         "Process automation",
-        "Systems development",
+        "Data and Business Intelligence",
       ],
     },
     experienceTitle: "Experience",
     experiences: [
       {
         type: "Professional",
-        role: "Intern - Purchasing / Data / Automation",
+        role: "Junior Full Stack Developer",
         place: "Aulevi - São Carlos, SP",
-        period: "Jan/2026 - Current",
+        period: "Jan/2026 - Present",
         description:
-          "Strategic support to the purchasing and supply area, combining data intelligence and software development. I work from data analysis with SQL, Power BI, and Excel to the design of full systems and Python tools. My focus is on end-to-end automation of manual processes, replacing slow data extraction routines with unified systems that deliver fast information and standardized visual outputs.",
+          "Development and evolution of internal systems, web applications, and automation tools that support the company's commercial and operational processes. I take part in gathering requirements, defining solutions, building features, integrating databases and enterprise systems, and maintaining systems in production, from the front end to APIs and data persistence.",
         highlights: [
-          "Systems Development",
-          "SQL and data treatment",
-          "Power BI and Excel",
-          "Cost and supplier analysis",
+          "Full Stack development of the ALV ecosystem",
+          "Customer, product, quote, and order management",
+          "APIs and integrations (including TOTVS Protheus)",
+          "Routine automation and dashboards",
         ],
       },
       {
         type: "Professional",
-        role: "Intern - Purchasing / Data",
+        role: "Intern - Purchasing / Data / Automation",
         place: "Simple Wall / Smart Pods - São Carlos, SP",
         period: "Jul/2024 - Dec/2025",
         description:
-          "I combine technical data analysis with operational execution in the supply sector. I use SQL, Python, and Excel to extract and clean databases, consolidating critical information visualized through dashboards and KPIs in Power BI. This entire technological structure I develop serves as a foundation to bring agility and security to daily purchasing activities, actively supporting quotes, purchase orders, pre-invoice processes, and Master Data management.",
+          "Worked in purchasing and supply, using technology and data analysis to improve operational processes. Built tools for data processing, report automation, and Power BI indicators to support decisions and daily activities, with hands-on support for quotations, purchase orders, pre-invoices, and Master Data management.",
         highlights: [
-          "Dashboards and KPIs",
-          "Purchasing and supply",
-          "Master Data",
-          "Automated reports",
+          "Data analysis and processing",
+          "SQL, Python, and Excel",
+          "Power BI dashboards and KPIs",
+          "Purchasing, supply, and Master Data",
         ],
       },
       {
@@ -379,19 +392,19 @@ export const dictionary = {
         place: "Compass UOL - Remote",
         period: "Jun/2023 - Oct/2023",
         description:
-          "Focus on building secure, stable, and well-structured applications. I develop ecosystems using React Native and TypeScript to ensure clean code free from structural ambiguities. I work integrated into agile environments (Scrum), managing deliveries with Git and applying rigorous end-to-end security standards. On the infrastructure side, I rely on the AWS Well-Architected Framework to explore cloud services and design solutions ready to scale efficiently.",
+          "Built applications with React Native and TypeScript, working in a team with agile methodologies (Scrum). Gained experience with version control, component documentation, and cloud architecture and infrastructure concepts based on the AWS Well-Architected Framework.",
         highlights: [
-          "React Native",
-          "TypeScript",
-          "Git and Scrum",
-          "AWS Well-Architected",
+          "React Native and TypeScript",
+          "Git and GitHub",
+          "Agile methodologies (Scrum)",
+          "Storybook and AWS fundamentals",
         ],
       },
       {
         type: "Academic",
         role: "Technology Degree in Systems Analysis and Development",
         place: "IFSP - São Carlos",
-        period: "2022 - Current",
+        period: "2022 - Present",
         description:
           "Higher education focused on programming, databases, web development, software engineering, and system building, connecting technical foundations with practical projects in automation, data, and interfaces.",
         highlights: [
@@ -407,7 +420,7 @@ export const dictionary = {
         place: "IFSP - São Carlos",
         period: "2018 - 2021",
         description:
-          "Technical education in avionics systems, maintenance, diagnostic logic, and attention to critical processes, contributing to a disciplined view of operation, precision, and reliability.",
+          "Technical education in avionics systems, maintenance, diagnostic logic, and attention to critical processes, shaping a disciplined approach to operations, precision, and reliability.",
         highlights: [
           "Avionics",
           "Technical maintenance",
@@ -429,17 +442,56 @@ export const dictionary = {
     },
     projects: [
       {
-        title: "Automated Estimating Quote System",
+        title: "ALV - Operations Management Platform",
         description:
-          "Responsive full-stack platform designed to eliminate the time spent creating manual quotes. By inserting specific parameters, the system automatically generates cost estimates in minutes. Initially created for self-service kiosks, the system is accessible via the web from any internet-connected device.",
-        tags: ["React", "FastAPI", "Kiosk", "Automation", "Full-Stack"],
+          "An enterprise platform that integrates and organizes internal processes, connecting the commercial and operational areas in a single environment. It includes modules for sales management, process tracking, operations, and logistics, with workflows, access control, and activity traceability.",
+        tags: ["React", "FastAPI", "PostgreSQL", "Supabase", "Full-Stack"],
         problem:
-          "The operation's biggest bottleneck was the high amount of time spent manually elaborating estimate quotes. The process was slow, required complex calculations, and generated long waits for the customer, making fast and scalable service impossible, especially during events and trade shows.",
+          "Information and processes scattered across spreadsheets, systems, and departments made it hard to track stages, trace activity, and make decisions.",
         solution:
-          "Development of a unified system that centralizes and automates pricing. The user (or the customer themselves at the kiosk) enters the project parameters, and the application instantly processes the business rules. What used to take hours now delivers a complete estimate quote in minutes, whether on the kiosk or a mobile browser.",
+          "Independent yet integrated modules within a single ecosystem, with process management, role-based permissions and responsibilities, integration with enterprise systems, and activity automation.",
         technologies: [
           "React",
           "TypeScript",
+          "Python",
+          "FastAPI",
+          "PostgreSQL",
+          "Supabase",
+          "SQL",
+        ],
+        highlights: [
+          "Independent and integrated modules",
+          "Process management and stage tracking",
+          "Permission and responsibility control",
+          "Integration across operational areas and enterprise systems",
+          "Activity automation and centralized information",
+          "Web interfaces and APIs",
+        ],
+        gallery: [
+          {
+            title: "Process tracking",
+            caption: "Organized view of each process's stages and owners.",
+          },
+          {
+            title: "Integrated modules",
+            caption:
+              "Commercial and operational areas connected in a single environment.",
+          },
+        ],
+      },
+      {
+        title: "Automated Quoting System",
+        description:
+          "A responsive full-stack platform that automates the creation of estimate quotes, replacing manual calculations and processes with an integrated digital flow. Initially built for self-service kiosks, it evolved into a web solution accessible from any device.",
+        tags: ["React", "FastAPI", "Kiosk", "Automation", "Full-Stack"],
+        problem:
+          "The operation's biggest bottleneck was the time spent preparing estimate quotes by hand. The process was slow, required complex calculations, and left customers waiting, making fast and scalable service impossible, especially at events and trade shows.",
+        solution:
+          "A unified system that centralizes and automates pricing. The user (or the customer at the kiosk) enters the project parameters and the application applies the business rules instantly. What used to take hours now produces a complete estimate in minutes, on the kiosk or on a phone browser.",
+        technologies: [
+          "React",
+          "TypeScript",
+          "Python",
           "FastAPI",
           "SQLite",
           "SQLAlchemy",
@@ -447,47 +499,41 @@ export const dictionary = {
           "Responsive Design",
         ],
         highlights: [
-          "Automated quote calculation based on parameters",
-          "Reduced response time (estimates ready in minutes)",
-          "Universal web access on any device (mobile, desktop, or kiosk)",
-          "High-usability interface with a guided step-by-step flow",
-          "Lead capture integrated directly into proposal generation",
-          "Centralized calculation engine in the backend to ensure consistency",
+          "Automated calculations and commercial rules",
+          "Estimates ready in a few minutes",
+          "Web access on any device (mobile, desktop, or kiosk)",
+          "Responsive interface with a guided step-by-step flow",
+          "Lead capture built into proposal generation",
+          "Centralized backend calculation engine for consistency",
         ],
         gallery: [
           {
-            title: "Parameter Insertion",
+            title: "Parameter Input",
             caption:
-              "Guided and scalable interface where project variables are quickly inserted without complication.",
+              "A guided interface where project variables are entered quickly and without hassle.",
           },
           {
             title: "Estimate in Minutes",
             caption:
-              "Calculation processed automatically by the system, delivering the complete quote ready for the client in real time.",
+              "Automatic calculation that delivers a complete, client-ready quote in real time.",
           },
         ],
       },
       {
         title: "Report and Document Automation",
         description:
-          "Python tools to read reports, organize operational data, and automatically generate documents. The focus is to cut repetitive tasks, standardize outputs, and reduce errors in administrative processes.",
+          "Python tools that automate administrative and operational tasks. They read, clean, consolidate, and validate data, then automatically generate standardized reports and documents.",
         tags: ["Python", "Data Analysis", "Automation"],
         problem:
-          "Administrative reports and documents required manual checking, data copying between files, and repeating error-prone steps.",
+          "Administrative reports and documents required manual checking, copying data between files, and repeating error-prone steps.",
         solution:
-          "Creation of scripts to read files, consolidate information, apply validation rules, and automatically generate standardized documents.",
-        technologies: [
-          "Python",
-          "Pandas",
-          "OpenPyXL",
-          "PDF/Docs",
-          "Local automation",
-        ],
+          "Scripts that read files, consolidate information, apply validation rules, and automatically generate standardized documents.",
+        technologies: ["Python", "Pandas", "OpenPyXL", "SQL", "PDF/Docs"],
         highlights: [
-          "Data reading and cleaning",
-          "Standardized document generation",
-          "Rework reduction",
-          "Simple flow for administrative use",
+          "Automated spreadsheet processing",
+          "Data cleaning and consolidation",
+          "Standardized report and document generation",
+          "Less manual work and rework",
         ],
         gallery: [
           {
@@ -497,25 +543,31 @@ export const dictionary = {
           {
             title: "Document output",
             caption:
-              "Final document generated with treated data and standardized layout.",
+              "Final document generated from clean data with a standardized layout.",
           },
         ],
       },
       {
-        title: "PriceTable Pro",
+        title: "PriceTable Pro - Price Table Management",
         description:
-          "Platform for creating and managing price tables, with visual data configuration and high-quality PDF layout export for commercial and operational use.",
+          "An application for organizing and configuring commercial price tables, structuring products and prices and generating high-quality PDFs with a consistent look for commercial and operational use.",
         tags: ["React", "Puppeteer", "PDF"],
         problem:
-          "Price tables need to be visually consistent, but manually editing layouts or exporting low-quality files delays commercial use.",
+          "Price tables must look consistent, but editing layouts by hand or exporting low-quality files slows down commercial use.",
         solution:
-          "Interface to configure data and layouts, with controlled rendering and PDF export using browser automation.",
-        technologies: ["React", "Tailwind CSS", "Puppeteer", "Node.js", "PDF"],
+          "An interface to configure data and layouts, with controlled rendering and PDF export through browser automation.",
+        technologies: [
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Node.js",
+          "Puppeteer",
+        ],
         highlights: [
-          "Visual configuration",
-          "PDF export",
-          "More consistent commercial layout",
-          "Fast editing workflow",
+          "Visual configuration of information",
+          "Product and price organization",
+          "Automated PDF generation",
+          "Standardized commercial documents",
         ],
         gallery: [
           {
@@ -531,12 +583,12 @@ export const dictionary = {
       {
         title: "Interactive Portfolio",
         description:
-          "This site was structured with Vite, Tailwind CSS, language switching, light/dark theme, and reusable components to present technical projects with a modern and direct visual style.",
+          "This site, built to present experience and projects in an organized, responsive, and accessible way, with language switching, light/dark theme, and reusable components.",
         tags: ["Vite", "Tailwind CSS", "i18n"],
         problem:
-          "A generic portfolio didn't properly show the combination of web development, automation, and real experience with operational processes.",
+          "A generic portfolio did not convey the combination of systems development, automation, and real experience with business processes.",
         solution:
-          "Building a responsive page with bilingual content, light/dark theme, minimalist/brutalist visuals, and a structure ready to detail each project.",
+          "A responsive page with bilingual content, light/dark theme, and a structure ready to detail each project.",
         technologies: [
           "React",
           "Vite",
@@ -545,16 +597,15 @@ export const dictionary = {
           "Lucide Icons",
         ],
         highlights: [
-          "Light/dark theme",
-          "PT-BR and EN",
-          "Reusable components",
-          "Detailed project modal",
+          "Responsive interface",
+          "Light and dark themes",
+          "Portuguese and English",
+          "Interactive project presentation",
         ],
         gallery: [
           {
             title: "Responsive hero",
-            caption:
-              "First block with direct messaging, image, and technical stats.",
+            caption: "Opening section with a direct message and key focus areas.",
           },
           {
             title: "Interactive cards",
@@ -566,64 +617,37 @@ export const dictionary = {
     skillsTitle: "Skills",
     skills: [
       {
-        title: "Development",
-        items: [
-          "Modern web systems",
-          "Responsive interfaces",
-          "Kiosk applications",
-          "User experience",
-          "Clean and minimalist design",
-          "Intuitive flows",
-        ],
+        title: "Front-end",
+        description: "Responsive, fast and easy-to-use interfaces — from the web to self-service kiosks.",
+        items: ["React", "TypeScript", "JavaScript", "HTML/CSS", "Tailwind CSS", "React Native"],
       },
       {
-        title: "Systems and Integrations",
-        items: [
-          "Back-end development",
-          "APIs REST",
-          "User authentication",
-          "ERP modules",
-          "External system integration",
-          "Business rules",
-        ],
+        title: "Back-end & Integrations",
+        description: "APIs, business rules and integrations with ERP and desktop systems.",
+        items: ["Python", "FastAPI", "Node.js", "APIs REST", "TOTVS Protheus", "Electron"],
       },
       {
-        title: "Data and Automation",
-        items: [
-          "Management dashboards",
-          "Data analysis",
-          "Process automation",
-          "Operational reports",
-          "Automatic PDF generation",
-          "Internal workflow improvement",
-        ],
+        title: "Databases",
+        description: "Modeling, querying and persisting relational data.",
+        items: ["PostgreSQL", "Supabase", "MySQL", "SQLite", "SQL"],
       },
       {
-        title: "Tech Stack",
-        items: [
-          "React",
-          "TypeScript",
-          "Python",
-          "FastAPI",
-          "SQLite",
-          "Tailwind CSS",
-          "Vite",
-          "Puppeteer",
-          "Git",
-        ],
+        title: "Data, BI & Tools",
+        description: "Analysis, dashboards and the everyday development toolkit.",
+        items: ["Power BI", "Excel", "Pandas", "Git/GitHub", "Docker", "Linux", "Figma"],
       },
     ],
     ui: {
       all: "All",
       filterLabel: "Filter projects by technology",
-      available: "Open to opportunities",
+      available: "Open to professional connections",
       footer: "Built with React, Vite and Tailwind CSS.",
       backToTop: "Back to top",
     },
     contact: {
       title: "Contact",
       subtitle:
-        "Do you have a manual process, a critical spreadsheet, or a routine that takes too much time?",
+        "Let's turn ideas into solutions. If you'd like to exchange experiences, talk about technology, or build something together, get in touch.",
       name: "Name",
       email: "Email",
       message: "Message",

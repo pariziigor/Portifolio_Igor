@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 /**
  * Fundo dinâmico: rede de partículas em <canvas> que reage ao mouse.
  * - DPR limitado a 2, quantidade proporcional à área (menos partículas no mobile)
+ * - Limitado a ~30fps e pausado durante o scroll (menos recálculo do blur dos cards)
  * - Pausa quando a aba está oculta; frame estático com prefers-reduced-motion
  * - Cores lidas das variáveis CSS (--c-acid / --c-violet), acompanhando o tema
  */
@@ -34,7 +35,7 @@ export function Background() {
       canvas.width = width * dpr;
       canvas.height = height * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      const count = Math.round(Math.min(Math.max((width * height) / 16000, 28), 85));
+      const count = Math.round(Math.min(Math.max((width * height) / 26000, 20), 50));
       particles = Array.from({ length: count }, (_, i) => ({
         x: Math.random() * width,
         y: Math.random() * height,
@@ -87,9 +88,19 @@ export function Background() {
       }
     }
 
-    const loop = () => {
-      draw();
+    let last = 0;
+    let scrollTimer = 0;
+    let scrolling = false;
+    const loop = (now) => {
       frame = requestAnimationFrame(loop);
+      if (scrolling || now - last < 33) return; // ~30fps
+      last = now;
+      draw();
+    };
+    const onScroll = () => {
+      scrolling = true;
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(() => (scrolling = false), 160);
     };
     const start = () => {
       if (!reduce && !frame) frame = requestAnimationFrame(loop);
@@ -120,6 +131,7 @@ export function Background() {
     themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
 
     window.addEventListener("resize", resize);
+    window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("pointermove", onMove, { passive: true });
     document.addEventListener("mouseleave", onLeave);
     document.addEventListener("visibilitychange", onVisibility);
@@ -127,13 +139,20 @@ export function Background() {
     return () => {
       stop();
       themeObserver.disconnect();
+      clearTimeout(scrollTimer);
       window.removeEventListener("resize", resize);
+      window.removeEventListener("scroll", onScroll);
       window.removeEventListener("pointermove", onMove);
       document.removeEventListener("mouseleave", onLeave);
       document.removeEventListener("visibilitychange", onVisibility);
     };
   }, []);
 
-  return <canvas ref={canvasRef} className="bg-canvas" aria-hidden="true" />;
+  return (
+    <>
+      <div className="bg-blobs" aria-hidden="true" />
+      <canvas ref={canvasRef} className="bg-canvas" aria-hidden="true" />
+    </>
+  );
 }
 
