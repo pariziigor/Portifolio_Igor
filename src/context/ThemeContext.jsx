@@ -6,7 +6,7 @@ export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(() => {
     const storedTheme = localStorage.getItem("portfolio-theme");
     if (storedTheme) return storedTheme;
-    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    return "dark"; // padrão: dark neon
   });
 
   useEffect(() => {

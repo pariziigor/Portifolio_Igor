@@ -51,9 +51,9 @@ export function Header() {
 
   return (
     <header className="fixed left-0 right-0 top-0 z-50 px-3 pt-3 transition duration-300 sm:px-6">
-      <div className={isScrolled ? "glass-panel mx-auto flex min-h-16 max-w-7xl items-center justify-between gap-3 px-3 py-2 transition duration-300 sm:px-5 lg:px-6" : "mx-auto flex min-h-16 max-w-7xl items-center justify-between gap-3 rounded-full border border-white/30 bg-paper/50 px-3 py-2 shadow-glass backdrop-blur-2xl transition duration-300 dark:border-white/10 dark:bg-ink/40 sm:px-5 lg:px-6"}>
-        <a href="#home" className="min-w-0 truncate font-display text-base font-black uppercase tracking-normal transition hover:text-ink/68 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-acid dark:hover:text-paper/68 sm:text-lg" onClick={closeMenu}>
-          Igor Parizi
+      <div className={isScrolled ? "glass-panel mx-auto flex min-h-16 max-w-7xl items-center justify-between gap-3 px-3 py-2 transition duration-300 sm:px-5 lg:px-6" : "mx-auto flex min-h-16 max-w-7xl items-center justify-between gap-3 rounded-full border border-ink/10 bg-paper/50 px-3 py-2 shadow-glass backdrop-blur-2xl transition duration-300 dark:border-white/10 dark:bg-ink/40 sm:px-5 lg:px-6"}>
+        <a href="#home" className="min-w-0 truncate font-mono text-sm font-bold tracking-tight transition hover:text-ink/68 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-acid dark:hover:text-paper/68 sm:text-lg" onClick={closeMenu}>
+          <span className="text-acid">&lt;</span>Igor Parizi<span className="text-acid"> /&gt;</span>
         </a>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary navigation">

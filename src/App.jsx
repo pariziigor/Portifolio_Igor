@@ -1,6 +1,11 @@
 import { lazy, Suspense, useEffect, useState } from "react";
 import { ContactForm } from "./components/ContactForm.jsx";
+import { Footer, ProjectFilter, ScrollProgress } from "./components/Extras.jsx";
 import { Header } from "./components/Header.jsx";
+import { Background } from "./components/fx/Background.jsx";
+import { Cursor } from "./components/fx/Cursor.jsx";
+import { Loader } from "./components/fx/Loader.jsx";
+import { useSmoothScroll } from "./hooks/useSmoothScroll.js";
 import { Hero } from "./components/Hero.jsx";
 import { ProjectCard } from "./components/ProjectCard.jsx";
 import { Section } from "./components/Section.jsx";
@@ -17,6 +22,19 @@ const ProjectModal = lazy(() =>
 function App() {
   const { language, t } = useI18n();
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(null);
+  const [activeTag, setActiveTag] = useState(null);
+  const lenisRef = useSmoothScroll();
+
+  // Pausa o smooth scroll enquanto o modal está aberto
+  useEffect(() => {
+    const lenis = lenisRef.current;
+    if (!lenis) return;
+    if (selectedProjectIndex === null) lenis.start();
+    else lenis.stop();
+  }, [selectedProjectIndex, lenisRef]);
+  const allTags = [...new Set(t.projects.flatMap((project) => project.tags))];
+
+  useEffect(() => setActiveTag(null), [language]);
   const selectedProject =
     selectedProjectIndex === null ? null : t.projects[selectedProjectIndex];
 
@@ -25,7 +43,7 @@ function App() {
   }, [language]);
 
   useEffect(() => {
-    const elements = document.querySelectorAll(".reveal");
+    const elements = document.querySelectorAll(".reveal:not(.is-visible)");
     const groupedElements = new Map();
 
     elements.forEach((element) => {
@@ -58,10 +76,14 @@ function App() {
 
     elements.forEach((element) => observer.observe(element));
     return () => observer.disconnect();
-  }, [language]);
+  }, [language, activeTag]);
 
   return (
-    <div className="min-h-screen bg-paper text-ink transition-colors duration-500 dark:bg-ink dark:text-paper">
+    <div className="min-h-screen text-ink transition-colors duration-500 dark:text-paper">
+      <Loader />
+      <Background />
+      <Cursor />
+      <div className="app-shell">
       <Header />
       <main>
         <Hero />
@@ -83,7 +105,7 @@ function App() {
             <div className="reveal lg:col-start-2">
               <div className="flex flex-wrap gap-3">
                 {t.about.pillars.map((pillar) => (
-                  <span key={pillar} className="glass-pill max-w-full break-words px-3 py-2 font-display text-xs font-black uppercase transition duration-300 hover:-translate-y-0.5 hover:bg-acid/80 hover:text-ink hover:shadow-glow sm:text-sm">
+                  <span key={pillar} className="glass-pill max-w-full break-words px-3 py-2 font-mono text-xs font-bold uppercase tracking-wider transition duration-300 hover:-translate-y-0.5 hover:bg-acid hover:text-ink hover:shadow-glow sm:text-sm">
                     {pillar}
                   </span>
                 ))}
@@ -139,25 +161,28 @@ function App() {
         </Section>
 
         <Section id="projects" kicker="03" title={t.projectsTitle}>
+          <ProjectFilter tags={allTags} active={activeTag} onChange={setActiveTag} />
           <div className="grid gap-6 md:grid-cols-2">
-            {t.projects.map((project, index) => (
-              <ProjectCard
-                key={project.title}
-                project={project}
-                index={index}
-                detailsLabel={t.projectDetails.open}
-                onSelect={() => setSelectedProjectIndex(index)}
-              />
-            ))}
+            {t.projects.map((project, index) =>
+              activeTag && !project.tags.includes(activeTag) ? null : (
+                <ProjectCard
+                  key={project.title}
+                  project={project}
+                  index={index}
+                  detailsLabel={t.projectDetails.open}
+                  onSelect={() => setSelectedProjectIndex(index)}
+                />
+              )
+            )}
           </div>
         </Section>
 
         <Section id="skills" kicker="04" title={t.skillsTitle}>
-          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4 xl:gap-5">
             {t.skills.map((group) => (
               <article
                 key={group.title}
-                    className="reveal interactive-surface glass-card min-w-0 p-5 sm:p-6"
+                    className="reveal interactive-surface glass-card min-w-0 p-5"
               >
                 <h3 className="break-words font-display text-xl font-black sm:text-2xl">{group.title}</h3>
                 <ul className="mt-6 grid gap-3">
@@ -182,6 +207,9 @@ function App() {
           <ContactForm />
         </Section>
       </main>
+      <Footer />
+      <ScrollProgress />
+      </div>
 
       {selectedProject ? (
         <Suspense fallback={null}>

@@ -114,7 +114,7 @@ export function ProjectModal({ project, labels, onClose }) {
   };
 
   return (
-    <div className="modal-backdrop fixed inset-0 z-[70] overflow-hidden bg-ink/20 p-2 backdrop-blur-xl dark:bg-ink/75 dark:backdrop-blur-2xl sm:p-4" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+    <div data-lenis-prevent className="modal-backdrop fixed inset-0 z-[70] overflow-hidden bg-ink/20 p-2 backdrop-blur-xl dark:bg-ink/75 dark:backdrop-blur-2xl sm:p-4" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
       <button className="fixed inset-0 h-full w-full cursor-default" onClick={onClose} aria-label={labels.close} />
 
       <article className="modal-panel project-modal-panel relative mx-auto flex h-[calc(100svh-1rem)] max-w-7xl flex-col overflow-hidden rounded-[2rem] border shadow-glass backdrop-blur-xl dark:backdrop-blur-2xl sm:h-[calc(100svh-2rem)] sm:rounded-[2.5rem]">
@@ -135,17 +135,17 @@ export function ProjectModal({ project, labels, onClose }) {
             <p className="project-modal-surface rounded-3xl border p-4 text-sm font-medium leading-7 text-ink/76 backdrop-blur-xl dark:text-paper/76 sm:p-5 sm:text-base">{project.description}</p>
 
             <section className="border-l border-ink/15 pl-4 dark:border-white/15">
-              <h4 className="font-display text-xs font-black uppercase tracking-wide text-ink/58 dark:text-paper/58">{labels.problem}</h4>
+              <h4 className="font-mono text-xs font-bold uppercase tracking-widest text-ink/58 dark:text-paper/58">{labels.problem}</h4>
               <p className="mt-2 text-sm leading-7 text-ink/72 dark:text-paper/72 sm:text-base">{project.problem}</p>
             </section>
 
             <section className="border-l border-ink/15 pl-4 dark:border-white/15">
-              <h4 className="font-display text-xs font-black uppercase tracking-wide text-ink/58 dark:text-paper/58">{labels.solution}</h4>
+              <h4 className="font-mono text-xs font-bold uppercase tracking-widest text-ink/58 dark:text-paper/58">{labels.solution}</h4>
               <p className="mt-2 text-sm leading-7 text-ink/72 dark:text-paper/72 sm:text-base">{project.solution}</p>
             </section>
 
             <section>
-              <h4 className="font-display text-xs font-black uppercase tracking-wide text-ink/58 dark:text-paper/58">{labels.technologies}</h4>
+              <h4 className="font-mono text-xs font-bold uppercase tracking-widest text-ink/58 dark:text-paper/58">{labels.technologies}</h4>
               <div className="mt-3 flex flex-wrap gap-2">
                 {project.technologies.map((technology) => (
                   <span key={technology} className="max-w-full break-words rounded-full bg-acid/80 px-3 py-1.5 text-xs font-black uppercase text-ink transition duration-300 hover:-translate-y-0.5 dark:shadow-glow">
@@ -156,7 +156,7 @@ export function ProjectModal({ project, labels, onClose }) {
             </section>
 
             <section>
-              <h4 className="font-display text-xs font-black uppercase tracking-wide text-ink/58 dark:text-paper/58">{labels.highlights}</h4>
+              <h4 className="font-mono text-xs font-bold uppercase tracking-widest text-ink/58 dark:text-paper/58">{labels.highlights}</h4>
               <ul className="mt-3 grid gap-2 sm:grid-cols-2">
                 {project.highlights.map((highlight) => (
                   <li key={highlight} className="project-modal-surface rounded-2xl border px-3 py-2 text-sm font-bold backdrop-blur-xl transition duration-300 hover:-translate-y-0.5 hover:bg-acid/80 hover:text-ink dark:shadow-glass dark:hover:shadow-glow">
@@ -169,7 +169,7 @@ export function ProjectModal({ project, labels, onClose }) {
 
           <section className="project-modal-surface min-w-0 rounded-[2rem] border p-3 shadow-glass backdrop-blur-xl dark:backdrop-blur-2xl sm:p-4 lg:flex lg:min-h-0 lg:flex-col">
             <div className="flex items-center justify-between gap-3">
-              <h4 className="font-display text-xs font-black uppercase tracking-wide text-ink/58 dark:text-paper/58">{labels.gallery}</h4>
+              <h4 className="font-mono text-xs font-bold uppercase tracking-widest text-ink/58 dark:text-paper/58">{labels.gallery}</h4>
               <div className="hidden gap-2 sm:flex">
                 <button
                   type="button"

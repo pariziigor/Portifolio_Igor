@@ -285,7 +285,28 @@ export const dictionary = {
           "Melhoria de fluxos internos",
         ],
       },
+      {
+        title: "Stack técnica",
+        items: [
+          "React",
+          "TypeScript",
+          "Python",
+          "FastAPI",
+          "SQLite",
+          "Tailwind CSS",
+          "Vite",
+          "Puppeteer",
+          "Git",
+        ],
+      },
     ],
+    ui: {
+      all: "Todos",
+      filterLabel: "Filtrar projetos por tecnologia",
+      available: "Aberto a oportunidades",
+      footer: "Feito com React, Vite e Tailwind CSS.",
+      backToTop: "Voltar ao topo",
+    },
     contact: {
       title: "Contato",
       subtitle:
@@ -301,10 +322,10 @@ export const dictionary = {
   en: {
     nav: ["Home", "About", "Experience", "Projects", "Skills", "Contact"],
     hero: {
-      eyebrow: "Procurement data / Automation / Web systems",
+      eyebrow: "Data / Automation / Web systems",
       title: "I turn operational routines into clear systems.",
       subtitle:
-        "I build automations, dashboards, and modern interfaces to reduce manual work, organize procurement data, and speed up quoting, supply, and documentation workflows.",
+        "I build automations, dashboards, and modern interfaces to reduce manual work, organize data, and accelerate processes.",
       primary: "View Projects",
       secondary: "Get in Touch",
       stats: [
@@ -315,11 +336,11 @@ export const dictionary = {
     },
     about: {
       title: "About Me",
-      body: "I am a Systems Analysis and Development student working with data applied to purchasing and procurement. My practical experience in construction helps me identify real bottlenecks: repeated spreadsheets, reports that are hard to consolidate, manual quoting flows, and information scattered across inventory, projects, and suppliers. My work turns that scenario into practical tools, combining Python, React, FastAPI, SQLite, and automated document generation to create faster, traceable, and more reliable processes.",
+      body: "I am graduating in Systems Analysis and Development (ADS) and work in the development of full systems, automations, and digital solutions for companies. Currently, I work at Aulevi, combining technology, data, and experience in the civil construction sector to identify operational problems and transform manual processes into faster, organized, and more efficient solutions. My focus is on creating customized systems, from backend to frontend, with modern, easy-to-use interfaces and features designed to solve real everyday problems. I seek to develop solutions that simplify routines, centralize information, and help companies gain productivity.",
       pillars: [
-        "Purchasing and procurement",
+        "Civil Construction",
         "Process automation",
-        "Direct interfaces",
+        "Systems development",
       ],
     },
     experienceTitle: "Experience",
@@ -330,9 +351,9 @@ export const dictionary = {
         place: "Aulevi - São Carlos, SP",
         period: "Jan/2026 - Current",
         description:
-          "Development of Python tools to automate commercial proposals and quotes, removing manual report data extraction and generating standardized visual outputs. Work with SQL, Python, Power BI, and Excel to support purchasing strategy.",
+          "Strategic support to the purchasing and supply area, combining data intelligence and software development. I work from data analysis with SQL, Power BI, and Excel to the design of full systems and Python tools. My focus is on end-to-end automation of manual processes, replacing slow data extraction routines with unified systems that deliver fast information and standardized visual outputs.",
         highlights: [
-          "Python automation",
+          "Systems Development",
           "SQL and data treatment",
           "Power BI and Excel",
           "Cost and supplier analysis",
@@ -344,7 +365,7 @@ export const dictionary = {
         place: "Simple Wall / Smart Pods - São Carlos, SP",
         period: "Jul/2024 - Dec/2025",
         description:
-          "Extraction, treatment, cleanup, and standardization of data with SQL, Excel, and Python. Consolidation of datasets for purchasing, production, and supply teams, creation of Power BI dashboards and KPIs, and support for quotes, purchase orders, pre-invoices, and master data.",
+          "I combine technical data analysis with operational execution in the supply sector. I use SQL, Python, and Excel to extract and clean databases, consolidating critical information visualized through dashboards and KPIs in Power BI. This entire technological structure I develop serves as a foundation to bring agility and security to daily purchasing activities, actively supporting quotes, purchase orders, pre-invoice processes, and Master Data management.",
         highlights: [
           "Dashboards and KPIs",
           "Purchasing and supply",
@@ -358,7 +379,7 @@ export const dictionary = {
         place: "Compass UOL - Remote",
         period: "Jun/2023 - Oct/2023",
         description:
-          "Development of applications with React Native and TypeScript, application of security best practices, version control with Git, and work in an agile Scrum environment. Exploration of AWS services with focus on the Well-Architected Framework.",
+          "Focus on building secure, stable, and well-structured applications. I develop ecosystems using React Native and TypeScript to ensure clean code free from structural ambiguities. I work integrated into agile environments (Scrum), managing deliveries with Git and applying rigorous end-to-end security standards. On the infrastructure side, I rely on the AWS Well-Architected Framework to explore cloud services and design solutions ready to scale efficiently.",
         highlights: [
           "React Native",
           "TypeScript",
@@ -408,14 +429,53 @@ export const dictionary = {
     },
     projects: [
       {
+        title: "Automated Estimating Quote System",
+        description:
+          "Responsive full-stack platform designed to eliminate the time spent creating manual quotes. By inserting specific parameters, the system automatically generates cost estimates in minutes. Initially created for self-service kiosks, the system is accessible via the web from any internet-connected device.",
+        tags: ["React", "FastAPI", "Kiosk", "Automation", "Full-Stack"],
+        problem:
+          "The operation's biggest bottleneck was the high amount of time spent manually elaborating estimate quotes. The process was slow, required complex calculations, and generated long waits for the customer, making fast and scalable service impossible, especially during events and trade shows.",
+        solution:
+          "Development of a unified system that centralizes and automates pricing. The user (or the customer themselves at the kiosk) enters the project parameters, and the application instantly processes the business rules. What used to take hours now delivers a complete estimate quote in minutes, whether on the kiosk or a mobile browser.",
+        technologies: [
+          "React",
+          "TypeScript",
+          "FastAPI",
+          "SQLite",
+          "SQLAlchemy",
+          "Alembic",
+          "Responsive Design",
+        ],
+        highlights: [
+          "Automated quote calculation based on parameters",
+          "Reduced response time (estimates ready in minutes)",
+          "Universal web access on any device (mobile, desktop, or kiosk)",
+          "High-usability interface with a guided step-by-step flow",
+          "Lead capture integrated directly into proposal generation",
+          "Centralized calculation engine in the backend to ensure consistency",
+        ],
+        gallery: [
+          {
+            title: "Parameter Insertion",
+            caption:
+              "Guided and scalable interface where project variables are quickly inserted without complication.",
+          },
+          {
+            title: "Estimate in Minutes",
+            caption:
+              "Calculation processed automatically by the system, delivering the complete quote ready for the client in real time.",
+          },
+        ],
+      },
+      {
         title: "Report and Document Automation",
         description:
-          "Python tools for reading reports, organizing operational data, and generating documents automatically. The goal is to remove repetitive work, standardize outputs, and reduce errors in administrative processes.",
+          "Python tools to read reports, organize operational data, and automatically generate documents. The focus is to cut repetitive tasks, standardize outputs, and reduce errors in administrative processes.",
         tags: ["Python", "Data Analysis", "Automation"],
         problem:
-          "Administrative reports and documents required manual checking, data copied between files, and repeated steps prone to mistakes.",
+          "Administrative reports and documents required manual checking, data copying between files, and repeating error-prone steps.",
         solution:
-          "Scripts to read files, consolidate information, apply validation rules, and generate standardized documents automatically.",
+          "Creation of scripts to read files, consolidate information, apply validation rules, and automatically generate standardized documents.",
         technologies: [
           "Python",
           "Pandas",
@@ -424,10 +484,10 @@ export const dictionary = {
           "Local automation",
         ],
         highlights: [
-          "Data reading and cleanup",
+          "Data reading and cleaning",
           "Standardized document generation",
-          "Less rework",
-          "Simple administrative workflow",
+          "Rework reduction",
+          "Simple flow for administrative use",
         ],
         gallery: [
           {
@@ -437,42 +497,7 @@ export const dictionary = {
           {
             title: "Document output",
             caption:
-              "Final document generated from treated data and a standardized layout.",
-          },
-        ],
-      },
-      {
-        title: "Quoting and Catalog System",
-        description:
-          "Full-stack application for clients, products, and quotes, with FastAPI APIs and a React experience designed to build quotes through a clean, fast, and maintainable flow.",
-        tags: ["React", "FastAPI", "Quotes"],
-        problem:
-          "The quoting process depended on scattered data, manual client/product records, and limited traceability between requests, items, and proposals.",
-        solution:
-          "A system with client and product records, authentication, quote building, and organized endpoints to keep the quoting flow centralized.",
-        technologies: [
-          "React",
-          "TypeScript",
-          "FastAPI",
-          "SQLAlchemy",
-          "SQLite",
-          "Alembic",
-        ],
-        highlights: [
-          "Centralized quote flow",
-          "Client and product records",
-          "Protected backend routes",
-          "Foundation ready to evolve",
-        ],
-        gallery: [
-          {
-            title: "Catalog and products",
-            caption: "Screen to search items and assemble proposals faster.",
-          },
-          {
-            title: "Quote flow",
-            caption:
-              "Interface to connect client, products, and conditions in one quote.",
+              "Final document generated with treated data and standardized layout.",
           },
         ],
       },
@@ -482,9 +507,9 @@ export const dictionary = {
           "Platform for creating and managing price tables, with visual data configuration and high-quality PDF layout export for commercial and operational use.",
         tags: ["React", "Puppeteer", "PDF"],
         problem:
-          "Price tables need visual consistency, but manually editing layouts or exporting low-quality files slows down commercial usage.",
+          "Price tables need to be visually consistent, but manually editing layouts or exporting low-quality files delays commercial use.",
         solution:
-          "Interface to configure data and layouts, with controlled rendering and PDF export through browser automation.",
+          "Interface to configure data and layouts, with controlled rendering and PDF export using browser automation.",
         technologies: ["React", "Tailwind CSS", "Puppeteer", "Node.js", "PDF"],
         highlights: [
           "Visual configuration",
@@ -504,76 +529,14 @@ export const dictionary = {
         ],
       },
       {
-        title: "Supply Dashboard",
-        description:
-          "System to support purchasing decisions by cross-referencing inventory, construction demands, and project needs. The goal is a clear view of what must be bought, prioritized, or reviewed.",
-        tags: ["React", "FastAPI", "SQLite"],
-        problem:
-          "Purchasing decisions became less precise when inventory, construction demands, and project priorities were analyzed separately.",
-        solution:
-          "Dashboard with a backend that cross-references demands and inventory, exposing simple indicators to support purchasing, priority, and review.",
-        technologies: ["React", "FastAPI", "SQLite", "Python", "Data Analysis"],
-        highlights: [
-          "Material needs calculation",
-          "Project-level view",
-          "Inventory query",
-          "Purchasing prioritization support",
-        ],
-        gallery: [
-          {
-            title: "Supply summary",
-            caption: "Indicators for needs, stock, and criticality.",
-          },
-          {
-            title: "Material list",
-            caption: "Operational table comparing demand and availability.",
-          },
-        ],
-      },
-      {
-        title: "Touch Interface for Kiosks",
-        description:
-          "Experience designed for events and service points, with simple navigation, large buttons, lead capture, and real-time quote generation.",
-        tags: ["React", "Kiosk", "UI/UX"],
-        problem:
-          "At events, service needs to be fast and clear, without complex navigation or tiny forms on touch screens.",
-        solution:
-          "Step-based interface with large components, guided flow, data capture, and focus on operation without keyboard or mouse.",
-        technologies: [
-          "React",
-          "Windows Kiosk",
-          "Touch UI",
-          "Local Storage",
-          "UI/UX",
-        ],
-        highlights: [
-          "Touch-first layout",
-          "Guided flow",
-          "Lead capture",
-          "Fullscreen use",
-        ],
-        gallery: [
-          {
-            title: "Touch home screen",
-            caption:
-              "Simple entry point with large actions and immediate reading.",
-          },
-          {
-            title: "Capture and quote",
-            caption:
-              "Steps to register contact and generate a proposal quickly.",
-          },
-        ],
-      },
-      {
         title: "Interactive Portfolio",
         description:
           "This site was structured with Vite, Tailwind CSS, language switching, light/dark theme, and reusable components to present technical projects with a modern and direct visual style.",
         tags: ["Vite", "Tailwind CSS", "i18n"],
         problem:
-          "A generic portfolio did not communicate the combination of web development, automation, and real experience with operational processes.",
+          "A generic portfolio didn't properly show the combination of web development, automation, and real experience with operational processes.",
         solution:
-          "Responsive page with bilingual content, light/dark theme, minimalist/brutalist visuals, and a structure ready to detail each project.",
+          "Building a responsive page with bilingual content, light/dark theme, minimalist/brutalist visuals, and a structure ready to detail each project.",
         technologies: [
           "React",
           "Vite",
@@ -603,7 +566,7 @@ export const dictionary = {
     skillsTitle: "Skills",
     skills: [
       {
-        title: "Interface Development",
+        title: "Development",
         items: [
           "Modern web systems",
           "Responsive interfaces",
@@ -625,7 +588,7 @@ export const dictionary = {
         ],
       },
       {
-        title: "Automation and Operations",
+        title: "Data and Automation",
         items: [
           "Management dashboards",
           "Data analysis",
@@ -635,7 +598,28 @@ export const dictionary = {
           "Internal workflow improvement",
         ],
       },
+      {
+        title: "Tech Stack",
+        items: [
+          "React",
+          "TypeScript",
+          "Python",
+          "FastAPI",
+          "SQLite",
+          "Tailwind CSS",
+          "Vite",
+          "Puppeteer",
+          "Git",
+        ],
+      },
     ],
+    ui: {
+      all: "All",
+      filterLabel: "Filter projects by technology",
+      available: "Open to opportunities",
+      footer: "Built with React, Vite and Tailwind CSS.",
+      backToTop: "Back to top",
+    },
     contact: {
       title: "Contact",
       subtitle:

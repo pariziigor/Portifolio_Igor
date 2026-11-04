@@ -6,16 +6,16 @@ export function ContactForm() {
 
   return (
     <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
-      <div className="reveal interactive-surface flex min-w-0 flex-col justify-between rounded-[2rem] border border-ink/10 bg-acid/70 p-5 text-ink shadow-glow backdrop-blur-2xl dark:border-white/10 sm:p-6">
+      <div className="reveal interactive-surface flex min-w-0 flex-col justify-between glass-card p-5 shadow-glow sm:p-6">
         <div>
-          <p className="break-words font-display text-2xl font-black leading-tight sm:text-3xl lg:text-4xl">{t.contact.subtitle}</p>
+          <p className="relative z-10 break-words font-display text-2xl font-bold leading-tight text-gradient sm:text-3xl lg:text-4xl">{t.contact.subtitle}</p>
         </div>
-        <div className="mt-8 grid gap-3 sm:mt-12 sm:flex sm:flex-wrap">
-          <a href="https://br.linkedin.com/in/igorparizi" className="button-secondary bg-white/65" target="_blank" rel="noreferrer">
+        <div className="relative z-10 mt-8 grid gap-3 sm:mt-12 sm:flex sm:flex-wrap">
+          <a href="https://br.linkedin.com/in/igorparizi" className="button-secondary" target="_blank" rel="noreferrer">
             <Linkedin size={18} />
             {t.contact.linkedin}
           </a>
-          <a href="https://github.com/pariziigor" className="button-secondary bg-white/65" target="_blank" rel="noreferrer">
+          <a href="https://github.com/pariziigor" className="button-secondary" target="_blank" rel="noreferrer">
             <Github size={18} />
             {t.contact.github}
           </a>

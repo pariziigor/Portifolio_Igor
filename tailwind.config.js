@@ -1,24 +1,28 @@
 /** @type {import('tailwindcss').Config} */
+// Todas as cores vêm de variáveis CSS (ver src/index.css) — edite lá para trocar a paleta.
+const token = (name) => `rgb(var(--c-${name}) / <alpha-value>)`;
+
 export default {
   darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
-        display: ["Space Grotesk", "Inter", "ui-sans-serif", "system-ui"],
+        sans: ["var(--font-sans)"],
+        display: ["var(--font-display)"],
+        mono: ["var(--font-mono)"],
       },
       colors: {
-        ink: "#111111",
-        paper: "#f4f1ea",
-        acid: "#ffe602",
-        cyan: "#34d5ff",
+        ink: token("ink"), // fundo escuro / texto no tema claro
+        paper: token("paper"), // texto no tema escuro / fundo claro
+        acid: token("acid"), // acento primário (ciano neon)
+        cyan: token("violet"), // acento secundário (violeta) — nome legado
+        violet: token("violet"),
+        neon: token("green"), // acento de status (verde)
       },
       boxShadow: {
-        brutal: "8px 8px 0 0 currentColor",
-        brutalSm: "4px 4px 0 0 currentColor",
-        glass: "0 18px 60px rgba(17, 17, 17, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.42)",
-        glow: "0 18px 60px rgba(52, 213, 255, 0.14), 0 8px 30px rgba(255, 59, 59, 0.18)",
+        glass: "0 18px 60px rgb(0 0 0 / 0.14), inset 0 1px 0 rgb(255 255 255 / 0.08)",
+        glow: "0 0 0 1px rgb(var(--c-acid) / 0.25), 0 10px 40px rgb(var(--c-acid) / 0.18), 0 6px 30px rgb(var(--c-violet) / 0.14)",
       },
     },
   },

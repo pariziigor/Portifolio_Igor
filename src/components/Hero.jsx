@@ -1,35 +1,50 @@
 import { ArrowDownRight, Send } from "lucide-react";
 import { useI18n } from "../context/I18nContext.jsx";
-import heroImage from "../assets/hero-workbench-optimized.jpg";
+import { SplitText } from "./fx/SplitText.jsx";
 
 export function Hero() {
   const { t } = useI18n();
 
   return (
-    <section id="home" className="relative min-h-[100svh] overflow-hidden border-b border-ink/10 dark:border-white/10 md:min-h-[92vh]">
-      <img
-        src={heroImage}
-        alt=""
-        className="hero-media absolute inset-0 h-full w-full object-cover"
-        decoding="async"
-        fetchPriority="high"
+    <section id="home" className="relative min-h-[100svh] overflow-hidden border-b border-ink/10 dark:border-white/10">
+      {/* Orbe decorativo com parallax (apenas transform) */}
+      <div
+        className="pointer-events-none absolute -right-24 top-1/2 hidden h-[34rem] w-[34rem] -translate-y-1/2 md:block lg:right-4 xl:right-24"
         aria-hidden="true"
-      />
-      <div className="absolute inset-0 bg-paper/76 backdrop-blur-[1px] dark:bg-ink/70" />
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(244,241,234,0.96),rgba(244,241,234,0.58),rgba(244,241,234,0.18))] dark:bg-[linear-gradient(90deg,rgba(17,17,17,0.96),rgba(17,17,17,0.70),rgba(17,17,17,0.22))]" />
+      >
+        <div data-parallax="0.12" className="h-full w-full">
+          <div className="hero-orb-core absolute inset-0 rounded-full" />
+          <div className="hero-orb absolute inset-0 rounded-full" />
+          <div className="hero-orb absolute inset-10 rounded-full opacity-60 [animation-direction:reverse] [animation-duration:36s]" />
+        </div>
+      </div>
 
-      <div className="relative mx-auto flex min-h-[100svh] max-w-7xl items-center px-4 pb-12 pt-24 sm:px-6 md:min-h-[92vh] md:pb-20 lg:px-8">
+      <div className="relative mx-auto flex min-h-[100svh] max-w-7xl items-center px-4 pb-12 pt-28 sm:px-6 md:pb-20 lg:px-8">
         <div className="w-full max-w-4xl">
-          <p className="reveal mb-5 inline-flex max-w-full rounded-full border border-ink/10 bg-acid/80 px-4 py-2 font-display text-[0.68rem] font-black uppercase leading-snug text-ink shadow-glow backdrop-blur-xl sm:text-xs">
+          <p
+            className="hero-in mb-5 inline-flex max-w-full items-center gap-2 rounded-full border border-acid/40 bg-acid/10 px-4 py-2 font-mono text-[0.68rem] font-bold uppercase leading-snug tracking-wider text-ink shadow-glow backdrop-blur-xl dark:text-acid sm:text-xs"
+            style={{ "--d": "300ms" }}
+          >
+            <span className="relative flex h-2 w-2" aria-hidden="true">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-neon opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-neon" />
+            </span>
+            {t.ui.available}
+          </p>
+          <p className="hero-in mb-4 font-mono text-xs font-bold uppercase tracking-[0.2em] text-ink/60 dark:text-paper/60 sm:text-sm" style={{ "--d": "450ms" }}>
+            {"// "}
             {t.hero.eyebrow}
           </p>
-          <h1 className="reveal max-w-full break-words font-display text-[clamp(2.65rem,14vw,5.2rem)] font-black leading-[0.95] text-ink dark:text-paper lg:text-8xl">
-            {t.hero.title}
+
+          <h1 className="max-w-full font-display text-[clamp(2.4rem,11vw,4.75rem)] font-bold leading-[1.02] tracking-tight text-ink dark:text-paper lg:text-[5.25rem]">
+            <SplitText text={t.hero.title} />
           </h1>
-          <p className="reveal mt-6 max-w-2xl text-base font-medium leading-7 text-ink/78 dark:text-paper/78 sm:text-lg sm:leading-8 lg:text-xl">
+
+          <p className="hero-in mt-6 max-w-2xl text-base font-medium leading-7 text-ink/75 dark:text-paper/70 sm:text-lg sm:leading-8" style={{ "--d": "900ms" }}>
             {t.hero.subtitle}
           </p>
-          <div className="reveal mt-8 grid gap-3 sm:flex sm:flex-wrap sm:gap-4">
+
+          <div className="hero-in mt-8 grid gap-3 sm:flex sm:flex-wrap sm:gap-4" style={{ "--d": "1050ms" }}>
             <a href="#projects" className="button-primary">
               {t.hero.primary}
               <ArrowDownRight size={20} />
@@ -39,11 +54,14 @@ export function Hero() {
               <Send size={18} />
             </a>
           </div>
-          <div className="reveal mt-8 grid max-w-3xl gap-3 sm:grid-cols-3 md:mt-10">
+
+          <div className="hero-in mt-10 grid max-w-3xl gap-3 sm:grid-cols-3" style={{ "--d": "1200ms" }}>
             {t.hero.stats.map((stat) => (
-              <div key={stat.value} className="interactive-surface hero-stat-card p-4">
-                <p className="font-display text-xl font-black sm:text-2xl">{stat.value}</p>
-                <p className="mt-1 text-sm font-bold uppercase text-ink/62 dark:text-paper/62">{stat.label}</p>
+              <div key={stat.value} className="hero-stat-card p-4">
+                <p className="relative z-10 font-display text-xl font-bold text-gradient sm:text-2xl">{stat.value}</p>
+                <p className="relative z-10 mt-1 font-mono text-[0.7rem] font-bold uppercase tracking-wider text-ink/60 dark:text-paper/60">
+                  {stat.label}
+                </p>
               </div>
             ))}
           </div>
